@@ -77,17 +77,17 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
     // Declare the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-database:20.0.3'
     implementation 'com.google.firebase:firebase-firestore:24.0.1'
-    implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'  // FirebaseUI for Cloud Firestore
-    implementation 'com.firebaseui:firebase-ui-auth:7.1.1'  // FirebaseUI for Firebase Auth
-    implementation 'com.firebaseui:firebase-ui-storage:7.1.1'  // FirebaseUI for Cloud Storage
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.0'  // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.0'  // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-storage:8.0.0'  // FirebaseUI for Cloud Storage
     // Declare the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
-    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx:20.0.2'
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
@@ -103,5 +103,5 @@ dependencies {
     /**
      * Annotations
      */
-    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
 }
