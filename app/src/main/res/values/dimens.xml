@@ -1,0 +1,6 @@
+<resources>
+    <!-- SnackBar Sizes -->
+    <dimen name="snack_bar_error_height_56">56dp</dimen>
+    <dimen name="radius">36dp</dimen>
+
+</resources>

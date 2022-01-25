@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.MyApp.Snackbar" parent="@style/Widget.MaterialComponents.Snackbar">
+        <!-- Custom margin -->
+        <item name="android:layout_margin">0dp</item>
+        <!-- Custom padding -->
+        <item name="android:padding">0dp</item>
+    </style>
+
+
+</resources>
