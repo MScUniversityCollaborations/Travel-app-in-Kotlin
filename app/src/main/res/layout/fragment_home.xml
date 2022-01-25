@@ -1,22 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.HomeFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
+    android:fillViewport="true"
+    tools:context=".ui.fragments.HomeFragment"
+    tools:ignore="contentDescription">
 
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <com.skydoves.androidveil.VeilRecyclerFrameView
+            android:id="@+id/veilRecyclerView_Destinations"
+            android:layout_width="309dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="32dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:veilFrame_baseAlpha="0.6"
+            app:veilFrame_baseColor="@color/colorSecondary2"
+            app:veilFrame_defaultChildVisible="false"
+            app:veilFrame_highlightAlpha="1.0"
+            app:veilFrame_highlightColor="@color/colorWhite"
+            app:veilFrame_radius="8dp"
+            app:veilFrame_shimmerEnable="true"
+            app:veilFrame_veiled="true" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_top_destinations"
+            style="@style/TextViewBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="16.5sp"
+            android:text="@string/txt_top_destinations"
+            app:layout_constraintEnd_toStartOf="@+id/txt_view_top_destinations_view_all"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/veilRecyclerView_Top_Destinations"
+            app:layout_constraintTop_toBottomOf="@+id/veilRecyclerView_Destinations" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_view_top_destinations_view_all"
+            style="@style/TextViewBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/txt_view_all"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_view_top_destinations"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_view_top_destinations" />
+
+        <com.skydoves.androidveil.VeilRecyclerFrameView
+            android:id="@+id/veilRecyclerView_Top_Destinations"
+            android:layout_width="309dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_view_top_destinations"
+            app:veilFrame_baseAlpha="0.6"
+            app:veilFrame_baseColor="@color/colorSecondary2"
+            app:veilFrame_defaultChildVisible="false"
+            app:veilFrame_highlightAlpha="1.0"
+            app:veilFrame_highlightColor="@color/colorWhite"
+            app:veilFrame_radius="8dp"
+            app:veilFrame_shimmerEnable="true"
+            app:veilFrame_veiled="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

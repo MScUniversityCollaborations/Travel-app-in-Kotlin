@@ -21,8 +21,9 @@
 
     <color name="colorSecondary">#272A3F</color>
     <color name="colorSecondary2">#6E7989</color>
-    <color name="colorSecondary3">#D8DAE0</color>
+    <color name="colorSecondary3">#4d5a65</color>
     <color name="colorSecondary4">#99A0B0</color>
+    <color name="colorSecondary5">#D8DAE0</color>
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorWhiteLight">#F4F7FA</color>

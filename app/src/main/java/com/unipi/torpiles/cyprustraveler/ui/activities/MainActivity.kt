@@ -1,20 +1,19 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
-import com.google.android.material.shape.CornerFamily
-import com.google.android.material.shape.MaterialShapeDrawable
 import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.databinding.ActivityMainBinding
+import com.unipi.torpiles.cyprustraveler.ui.fragments.FavouritesFragment
 import com.unipi.torpiles.cyprustraveler.ui.fragments.HomeFragment
+import com.unipi.torpiles.cyprustraveler.ui.fragments.ProfileFragment
 
 class MainActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val homeFragment = HomeFragment()
-    /*val favouritesFragment = FavouritesFragment()
-    val settingsFragment = SettingsFragment()*/
+    private val favouritesFragment = FavouritesFragment()
+    private val profileFragment = ProfileFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,30 +28,24 @@ class MainActivity : BaseActivity() {
 
     private fun setupBottomNavigationBar() {
         binding.apply {
-            /*val radius = resources.getDimension(R.dimen.radius)
-            val shapeDrawable : MaterialShapeDrawable= bottomNavigation.background as MaterialShapeDrawable
-            shapeDrawable.shapeAppearanceModel = shapeDrawable.shapeAppearanceModel
-                .toBuilder()
-                .setAllCorners(CornerFamily.ROUNDED, radius)
-                .build()*/
 
             bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.nav_home -> {
-                    setCurrentFragment(homeFragment)
-                    badgeClear(R.id.nav_home)
+                when (it.itemId) {
+                    R.id.nav_home -> {
+                        setCurrentFragment(homeFragment)
+                        badgeClear(R.id.nav_home)
+                    }
+                    R.id.nav_favourites -> {
+                        setCurrentFragment(favouritesFragment)
+                        badgeClear(R.id.nav_favourites)
+                    }
+                    R.id.nav_profile -> {
+                        setCurrentFragment(profileFragment)
+                        badgeClear(R.id.nav_profile)
+                    }
                 }
-                /*R.id.nav_favourites -> {
-                    setCurrentFragment(favouritesFragment)
-                    badgeClear(R.id.nav_favourites)
-                }
-                R.id.nav_settings -> {
-                    setCurrentFragment(settingsFragment)
-                    badgeClear(R.id.nav_settings)
-                }*/
+                true
             }
-            true
-        }
         }
     }
 
@@ -81,4 +74,8 @@ class MainActivity : BaseActivity() {
             replace(R.id.fl_wrapper, fragment)
             commit()
         }
+
+    override fun onBackPressed() {
+        doubleBackToExit()
+    }
 }

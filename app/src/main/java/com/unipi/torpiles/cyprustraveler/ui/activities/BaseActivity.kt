@@ -3,11 +3,12 @@ package com.unipi.torpiles.cyprustraveler.ui.activities
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import com.unipi.torpiles.cyprustraveler.R
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
+import java.util.concurrent.TimeUnit
 
 /**
  * A base activity class is used to define the functions and members which we will use in all the activities.
@@ -44,5 +45,28 @@ open class BaseActivity : AppCompatActivity() {
 
         //Start the dialog and display it on screen.
         mProgressDialog.show()
+    }
+
+    /**
+     * A function to implement the double back press feature to exit the app.
+     */
+    fun doubleBackToExit() {
+
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+
+        this.doubleBackToExitPressedOnce = true
+
+        Toast.makeText(
+            this,
+            resources.getString(R.string.txt_please_click_back_again_to_exit),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        backgroundExecutor.schedule({
+            doubleBackToExitPressedOnce = false
+        }, 2000, TimeUnit.MILLISECONDS)
     }
 }
