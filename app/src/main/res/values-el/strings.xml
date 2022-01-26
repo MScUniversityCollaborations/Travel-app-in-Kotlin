@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // Bottom Nav
+    <string name="menu_home">Αρχική</string>
+    <string name="menu_favourites">Αγαπημένα</string>
+    <string name="menu_profile">Προφίλ</string>
+    // Drawer Nav
+    <string name="txt_drawer_nav_exit">Έξοδος</string>
+    <string name="txt_drawer_nav_settings">Ρυθμίσεις</string>
+    <string name="txt_drawer_nav_favourites">Αγαπημένα</string>
+    <string name="txt_drawer_nav_profile">Προφίλ</string>
+    <string name="txt_drawer_nav_category_general">Γενικά</string>
+    <string name="txt_drawer_nav_category_account">Λογαριασμός</string>
+    <string name="txt_drawer_nav_category_other">Άλλο</string>
+    <string name="nav_drawer_close" translatable="false">Close</string>
+
+    // General
+    <string name="txt_please_wait">Παρακαλώ Περιμένετε…</string>
+    <string name="txt_please_click_back_again_to_exit">Πατήστε ξανά για έξοδο</string>
+
+    // Home
+    <string name="txt_top_destinations">Κορυφαίοι Προορισμοί</string>
+    <string name="txt_discover">Ανακαλύψτε</string>
+    <string name="txt_categories">Κατηγορίες</string>
+    <string name="txt_view_all">View All</string>
+
+    // Profile
+    <string name="txt_account_info">Account Info</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_phone_number">Phone Number</string>
+    <string name="txt_date_created">Date Created</string>
+    <string name="txt_edit">Edit</string>
+    <string name="txt_sign_out">Sign Out</string>
+
+    // Empty Layout
+    <string name="txt_must_sign_in">Sign In!</string>
+    <string name="txt_must_sign_in_2">You must sign in to see this.</string>
+    <string name="txt_no_favorites">No favorites found!</string>
+    <string name="txt_no_favorites_2">You haven\'t add anything to your favorites yet!</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="txt_destinations">Destinations</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_favourites">Favourite Destinations</string>
+</resources>

@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Cyprus Traveler</string>
+    <string name="app_name" translatable="false">Cyprus Traveler</string>
     // DEBUG - NO TRANSLATION
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_home">Home</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="title_home" translatable="false">Home</string>
 
     // Bottom Nav
     <string name="menu_home">Home</string>
