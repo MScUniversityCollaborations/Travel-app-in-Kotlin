@@ -22,24 +22,26 @@
     <string name="txt_top_destinations">Κορυφαίοι Προορισμοί</string>
     <string name="txt_discover">Ανακαλύψτε</string>
     <string name="txt_categories">Κατηγορίες</string>
-    <string name="txt_view_all">View All</string>
+    <string name="txt_view_all">Προβολή Όλων</string>
 
     // Profile
-    <string name="txt_account_info">Account Info</string>
+    <string name="txt_account_info">Πληροφορίες Λογαριασμού</string>
     <string name="txt_email">Email</string>
-    <string name="txt_phone_number">Phone Number</string>
-    <string name="txt_date_created">Date Created</string>
-    <string name="txt_edit">Edit</string>
-    <string name="txt_sign_out">Sign Out</string>
+    <string name="txt_phone_number">Αρ. Τηλεφώνου</string>
+    <string name="txt_date_created">Ημ/νια Εγγραφής</string>
+    <string name="txt_edit">Επεξεργασία</string>
+    <string name="txt_sign_out">Αποσύνδεση</string>
 
     // Empty Layout
-    <string name="txt_must_sign_in">Sign In!</string>
-    <string name="txt_must_sign_in_2">You must sign in to see this.</string>
-    <string name="txt_no_favorites">No favorites found!</string>
-    <string name="txt_no_favorites_2">You haven\'t add anything to your favorites yet!</string>
-    <string name="button_sign_in">Sign In</string>
-    <string name="button_sign_up">Sign Up</string>
-    <string name="txt_destinations">Destinations</string>
-    <string name="txt_profile">Profile</string>
-    <string name="txt_favourites">Favourite Destinations</string>
+    <string name="txt_must_sign_in">Συνδεθείτε!</string>
+    <string name="txt_must_sign_in_2">Πρέπει να συνδεθείτε για να προχωρήσετε.</string>
+    <string name="txt_no_favorites">Δεν βρέθηκαν αγαπημένα!</string>
+    <string name="txt_no_favorites_2">Δεν έχετε προσθέσει κάποιο προορισμό στα αγαπημένα σας ακόμη!</string>
+
+    <string name="button_sign_in">Σύνδεση</string>
+    <string name="button_sign_up">Εγγραφή</string>
+
+    <string name="txt_destinations">Προορισμοί</string>
+    <string name="txt_profile">Προφίλ</string>
+    <string name="txt_favourites">Αγαπημένοι Προορισμοί</string>
 </resources>
