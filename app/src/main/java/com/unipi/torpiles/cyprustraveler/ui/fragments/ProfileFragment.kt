@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.unipi.torpiles.cyprustraveler.databinding.FragmentHomeBinding
+import com.unipi.torpiles.cyprustraveler.databinding.FragmentProfileBinding
 
 class ProfileFragment : BaseFragment() {
 
     // ~~~~~~~VARIABLES~~~~~~~
-    private var _binding: FragmentHomeBinding? = null  // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
+    private var _binding: FragmentProfileBinding? = null  // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
     private val binding get() = _binding!!
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -18,7 +18,7 @@ class ProfileFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         init()
 

@@ -1,25 +1,50 @@
 <resources>
     <string name="app_name">Cyprus Traveler</string>
+    // DEBUG - NO TRANSLATION
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
-    
+
+    // Bottom Nav
     <string name="menu_home">Home</string>
     <string name="menu_favourites">Favourites</string>
     <string name="menu_profile">Profile</string>
+    // Drawer Nav
+    <string name="txt_drawer_nav_exit">Exit</string>
+    <string name="txt_drawer_nav_settings">Settings</string>
+    <string name="txt_drawer_nav_favourites">Favourites</string>
+    <string name="txt_drawer_nav_profile">Profile</string>
+    <string name="txt_drawer_nav_category_general">General</string>
+    <string name="txt_drawer_nav_category_account">Account</string>
+    <string name="txt_drawer_nav_category_other">Other</string>
+    <string name="nav_drawer_close">Close</string>
+
+    // General
     <string name="txt_please_wait">Please Wait…</string>
+    <string name="txt_please_click_back_again_to_exit">Press again to exit</string>
+
+    // Home
+    <string name="txt_top_destinations">Top Destinations</string>
     <string name="txt_discover">Discover</string>
     <string name="txt_categories">Categories</string>
     <string name="txt_view_all">View All</string>
 
-    <string name="txt_drawer_nav_exit">Exit</string>
-    <string name="txt_drawer_nav_settings">Settings</string>
-    <string name="txt_drawer_nav_favourites">Favourites</string>
-    <string name="txt_drawer_nav_my_account">My Account</string>
+    // Profile
+    <string name="txt_account_info">Account Info</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_phone_number">Phone Number</string>
+    <string name="txt_date_created">Date Created</string>
+    <string name="txt_edit">Edit</string>
+    <string name="txt_sign_out">Sign Out</string>
 
-    <string name="txt_drawer_nav_category_general">General</string>
-    <string name="txt_drawer_nav_category_account">Account</string>
-    <string name="txt_drawer_nav_category_other">Other</string>
+    // Empty Layout
+    <string name="txt_must_sign_in">Sign In!</string>
+    <string name="txt_must_sign_in_2">You must sign in to see this.</string>
+    <string name="txt_no_favorites">No favorites found!</string>
+    <string name="txt_no_favorites_2">You haven\'t add anything to your favorites yet!</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="txt_destinations">Destinations</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_favourites">Favourite Destinations</string>
 
-    <string name="txt_please_click_back_again_to_exit">Press again to exit</string>
-    <string name="txt_top_destinations">Top Destinations</string>
 </resources>

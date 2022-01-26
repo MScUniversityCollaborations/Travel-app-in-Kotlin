@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.unipi.torpiles.cyprustraveler.databinding.FragmentHomeBinding
+import com.unipi.torpiles.cyprustraveler.databinding.FragmentFavouritesBinding
 
 class FavouritesFragment : BaseFragment() {
 
     // ~~~~~~~VARIABLES~~~~~~~
-    private var _binding: FragmentHomeBinding? = null  // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
+    private var _binding: FragmentFavouritesBinding? = null  // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
     private val binding get() = _binding!!
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -18,7 +18,7 @@ class FavouritesFragment : BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentFavouritesBinding.inflate(inflater, container, false)
 
         init()
 

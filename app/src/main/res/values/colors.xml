@@ -13,6 +13,9 @@
     <color name="colorContainer">@color/colorWhite</color>
     <color name="colorBackground">@color/colorWhiteLight</color>
 
+    <color name="colorBgStart">#FBFDFD</color>
+    <color name="colorBgEnd">#FEFEFE</color>
+
     <color name="colorText">#404B57</color>
     <color name="colorText2">#BDBDBD</color>
     <color name="colorText3">#99A0B0</color>
@@ -26,7 +29,7 @@
     <color name="colorSecondary5">#D8DAE0</color>
 
     <color name="colorWhite">#FFFFFF</color>
-    <color name="colorWhiteLight">#F4F7FA</color>
+    <color name="colorWhiteLight">#FBFDFD</color>
     <color name="colorBlack">#1D2021</color>
     <color name="colorBlackDark">#0F1012</color>
     <color name="colorYellowOrange">#FDC600</color>
