@@ -71,6 +71,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 R.string.nav_drawer_close, R.string.nav_drawer_close
             )
             drawerLayout.addDrawerListener(toggle)
+            toggle.drawerArrowDrawable.barLength = 64F
+            toggle.drawerArrowDrawable.barThickness = 9F
+            toggle.drawerArrowDrawable.gapSize = 12F
             // Change drawer arrow icon
             toggle.drawerArrowDrawable.color =
                 ContextCompat.getColor(this@MainActivity, R.color.colorSecondary3)

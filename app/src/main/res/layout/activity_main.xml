@@ -44,6 +44,7 @@
             android:background="@drawable/shape_nav_rounded"
             android:elevation="8dp"
             app:itemIconSize="36dp"
+            app:itemHorizontalTranslationEnabled="false"
             app:itemTextColor="@color/colorWhite"
             app:labelVisibilityMode="unlabeled"
             app:layout_constraintBottom_toBottomOf="parent"
