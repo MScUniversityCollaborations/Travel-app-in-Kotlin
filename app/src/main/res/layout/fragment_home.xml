@@ -29,6 +29,7 @@
             app:veilFrame_highlightAlpha="1.0"
             app:veilFrame_highlightColor="@color/colorWhite"
             app:veilFrame_radius="8dp"
+
             app:veilFrame_shimmerEnable="true"
             app:veilFrame_veiled="true" />
 
