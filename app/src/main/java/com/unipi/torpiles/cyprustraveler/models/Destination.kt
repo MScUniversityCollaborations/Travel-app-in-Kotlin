@@ -22,6 +22,8 @@ data class Destination(
     val mapCords: ArrayList<String> = ArrayList(),
     val desc: ArrayList<String> = ArrayList(),
     val category: ArrayList<String> = ArrayList(),
+    var clicks: Int = 0,
+    var inFavourites: Int = 0,
 
     @ServerTimestamp
     val dateAdded: Date = Date(),

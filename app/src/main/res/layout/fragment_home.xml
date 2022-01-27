@@ -15,8 +15,8 @@
 
         <com.skydoves.androidveil.VeilRecyclerFrameView
             android:id="@+id/veilRecyclerView_Destinations"
-            android:layout_width="309dp"
-            android:layout_height="230dp"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
             android:layout_marginTop="32dp"
             android:paddingStart="16dp"
             android:paddingEnd="0dp"
@@ -62,7 +62,7 @@
 
         <com.skydoves.androidveil.VeilRecyclerFrameView
             android:id="@+id/veilRecyclerView_Top_Destinations"
-            android:layout_width="309dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="12dp"
             android:paddingStart="16dp"
@@ -89,7 +89,7 @@
             android:clipToPadding="false"
             android:paddingStart="16dp"
             android:paddingEnd="0dp"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/veilRecyclerView_Top_Destinations"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

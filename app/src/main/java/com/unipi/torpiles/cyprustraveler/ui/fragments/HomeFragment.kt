@@ -50,11 +50,11 @@ class HomeFragment : BaseFragment() {
 
             // Show the recycler and remove the empty state layout completely.
             binding.apply {
-                veilRecyclerViewTopDestinations.visibility = View.VISIBLE
+                veilRecyclerViewDestinations.visibility = View.VISIBLE
             }
 
-            // sets VeilRecyclerView's properties
-            binding.veilRecyclerViewTopDestinations.run {
+            // Sets VeilRecyclerView's properties
+            binding.veilRecyclerViewDestinations.run {
                 setVeilLayout(R.layout.shimmer_item_product)
                 setAdapter(
                     DestinationListAdapter(
@@ -65,7 +65,7 @@ class HomeFragment : BaseFragment() {
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
                 getRecyclerView().setHasFixedSize(true)
                 addVeiledItems(3)
-                // delay-auto-unveil
+                // Delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
                     {
                         unveilRecyclers()
@@ -73,15 +73,9 @@ class HomeFragment : BaseFragment() {
                     1000
                 )
             }
-        } else {
-            unveilRecyclers()
-            // Hide the recycler and show the empty state layout.
-            binding.apply {
-                veilRecyclerViewTopDestinations.visibility = View.INVISIBLE
-                layoutEmptyStateTopDestinations.root.visibility = View.VISIBLE
-            }
-
         }
+        else
+            unveilRecyclers()
     }
 
     private fun loadTopDestinations() {
@@ -94,12 +88,12 @@ class HomeFragment : BaseFragment() {
 
             // Show the recycler and remove the empty state layout completely.
             binding.apply {
-                veilRecyclerViewDestinations.visibility = View.VISIBLE
+                veilRecyclerViewTopDestinations.visibility = View.VISIBLE
                 layoutEmptyStateTopDestinations.root.visibility = View.GONE
             }
 
-            // sets VeilRecyclerView's properties
-            binding.veilRecyclerViewDestinations.run {
+            // Sets VeilRecyclerView's properties
+            binding.veilRecyclerViewTopDestinations.run {
                 setVeilLayout(R.layout.shimmer_item_product)
                 setAdapter(
                     TopDestinationListAdapter(
@@ -110,7 +104,7 @@ class HomeFragment : BaseFragment() {
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
                 getRecyclerView().setHasFixedSize(true)
                 addVeiledItems(5)
-                // delay-auto-unveil
+                // Delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
                     {
                         unveilRecyclers()
