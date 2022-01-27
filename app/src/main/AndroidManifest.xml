@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.unipi.torpiles.cyprustraveler">
 
+    <!-- To load images from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- To load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
