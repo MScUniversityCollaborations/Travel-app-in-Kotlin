@@ -47,5 +47,6 @@
     <string name="txt_destinations">Προορισμοί</string>
     <string name="txt_profile">Προφίλ</string>
     <string name="txt_favourites">Αγαπημένοι Προορισμοί</string>
+    <string name="txt_loading">Παρακαλώ Περιμένετε</string>
 
 </resources>

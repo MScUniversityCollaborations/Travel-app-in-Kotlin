@@ -49,6 +49,6 @@
     <string name="txt_destinations">Destinations</string>
     <string name="txt_profile">Profile</string>
     <string name="txt_favourites">Favourite Destinations</string>
-    <string name="txt_loading">Loading...</string>
+    <string name="txt_loading">Loading…</string>
 
 </resources>
