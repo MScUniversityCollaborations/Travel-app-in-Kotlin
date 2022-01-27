@@ -8,6 +8,14 @@ object Constants {
 	const val CYPRUS_TRAVELER_PREFERENCES: String = "CyprusTravelerPrefs"
 	val standardSimpleDateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.ENGLISH)
 
+	//LANGUAGE
+	const val LANGUAGE : String = "language"
+	const val ENGLISH_LANG : String =  "English"
+	const val GREEK_LANG : String =  "Greek"
+	const val GERMAN_LANG : String =  "German"
+	const val EL : String = "el"
+	const val EN : String = "en"
+
 	// Firebase Constants
 	// Collections
 	const val COLLECTION_USERS: String = "users"

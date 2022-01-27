@@ -11,16 +11,84 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar_activity_settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_activity_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupLag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="#024CAF50"
+            android:checkedButton="@+id/radioButtonEnglish"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_night_mode"
+            app:layout_constraintVertical_bias="0.031">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_lang"
+                style="@style/TextViewBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_language"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonGreek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/core_sans_cr_65_bold"
+                android:text="@string/txt_greek"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/core_sans_cr_65_bold"
+                android:text="@string/txt_english"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_appearance"
+            style="@style/TextViewBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_appearance"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_night_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/core_sans_cr_65_bold"
+            android:switchPadding="100dp"
+            android:text="@string/dark_mode"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView_appearance"
+            app:layout_constraintTop_toBottomOf="@+id/textView_appearance"
+            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

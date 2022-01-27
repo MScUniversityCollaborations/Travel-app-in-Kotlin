@@ -39,6 +39,10 @@
     // Settings
     <string name="txt_settings">Settings</string>
 
+    // Locale
+    <string name="txt_greek">Greek</string>
+    <string name="txt_english">English</string>
+
     // Empty Layout
     <string name="txt_must_sign_in">Sign In!</string>
     <string name="txt_must_sign_in_2">You must sign in to see this.</string>
@@ -50,7 +54,12 @@
     <string name="txt_profile">Profile</string>
     <string name="txt_favourites">Favourite Destinations</string>
     <string name="txt_loading">Loading…</string>
+
     <string name="txt_no_top_dest_available">No Top Destinations!</string>
     <string name="txt_check_again_another_time">Try again later.</string>
+    <string name="txt_language">Language</string>
+    <string name="txt_appearance">Appearance</string>
+    <string name="dark_mode">Night Mode</string>
+
 
 </resources>

@@ -15,7 +15,6 @@
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_drawer_nav_heart.xml" value="0.19537037037037036" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_drawer_nav_settings_linear.xml" value="0.19537037037037036" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_drawer_nav_user.xml" value="0.19537037037037036" />
-        <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_empty_content_filled.xml" value="0.24461538461538462" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_exit.xml" value="0.23703703703703705" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_forest.xml" value="0.2484375" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_heart.xml" value="0.23703703703703705" />
@@ -75,6 +74,19 @@
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/drawer_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/tabs.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/drawable/selector_nav_bottom_profile.xml" value="0.5213541666666667" />
+        <entry key="app/src/main/res/layout/activity_base.xml" value="0.4739583333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.40989583333333335" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.6" />
+        <entry key="app/src/main/res/layout/dialog_progress.xml" value="0.4739583333333333" />
+        <entry key="app/src/main/res/layout/fragment_favourites.xml" value="0.5108695652173914" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.40989583333333335" />
+        <entry key="app/src/main/res/layout/item_country.xml" value="0.48278985507246375" />
+        <entry key="app/src/main/res/layout/toolbar_activity_settings.xml" value="0.4786458333333333" />
+        <entry key="app/src/main/res/layout/toolbar_main.xml" value="0.44519927536231885" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/menu/drawer_nav_menu.xml" value="0.5489583333333333" />
       </map>
     </option>
   </component>

@@ -50,6 +50,7 @@
             style="@style/TextViewBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/core_sans_cr_65_bold"
             android:text="@string/txt_settings"
             android:textAlignment="center"
             android:textSize="24sp"

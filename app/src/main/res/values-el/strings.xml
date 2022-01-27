@@ -12,7 +12,6 @@
     <string name="txt_drawer_nav_category_general">Γενικά</string>
     <string name="txt_drawer_nav_category_account">Λογαριασμός</string>
     <string name="txt_drawer_nav_category_other">Άλλο</string>
-    <string name="nav_drawer_close_res" translatable="false">Close</string>
 
     // General
     <string name="txt_please_wait">Παρακαλώ Περιμένετε…</string>
@@ -35,6 +34,11 @@
     // Settings
     <string name="txt_settings">Ρυθμίσεις</string>
 
+    //Locale
+    <string name="txt_greek">Ελληνικά</string>
+    <string name="txt_english">Αγγλικά</string>
+
+
     // Empty Layout
     <string name="txt_must_sign_in">Συνδεθείτε!</string>
     <string name="txt_must_sign_in_2">Πρέπει να συνδεθείτε για να προχωρήσετε.</string>
@@ -48,5 +52,8 @@
     <string name="txt_profile">Προφίλ</string>
     <string name="txt_favourites">Αγαπημένοι Προορισμοί</string>
     <string name="txt_loading">Παρακαλώ Περιμένετε</string>
+    <string name="txt_language">Γλώσσα</string>
+    <string name="txt_appearance">Εμφάνιση</string>
+    <string name="dark_mode">Νυχτερινό Θέμα</string>
 
 </resources>

@@ -1,11 +1,15 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
+import Constants.EN
 import android.app.Dialog
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.view.ContextThemeWrapper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.unipi.torpiles.cyprustraveler.R
+import java.util.*
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.TimeUnit
@@ -68,5 +72,24 @@ open class BaseActivity : AppCompatActivity() {
         backgroundExecutor.schedule({
             doubleBackToExitPressedOnce = false
         }, 2000, TimeUnit.MILLISECONDS)
+    }
+
+    //ABOUT LANGUAGE
+    companion object {
+        //var dLocale: Locale? = null
+        var dLocale: Locale? = Locale(EN)
+    }
+
+    init {
+        updateConfig(this)
+    }
+
+    private fun updateConfig(wrapper: ContextThemeWrapper) {
+        if(dLocale==Locale(""))//If dLocale is null return
+            return
+        Locale.setDefault(dLocale)
+        val configuration = Configuration()
+        configuration.setLocale(dLocale)
+        wrapper.applyOverrideConfiguration(configuration)
     }
 }
