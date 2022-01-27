@@ -18,13 +18,12 @@ data class Destination(
     val id: String = "",
 
     val name: ArrayList<String> = ArrayList(),
-    val locDesc: ArrayList<String> = ArrayList(),
+    val quickDesc: ArrayList<String> = ArrayList(),
     val mapCords: String = "",
-
-
+    val desc: ArrayList<String> = ArrayList(),
+    val category: ArrayList<String> = ArrayList(),
 
     @ServerTimestamp
     val dateAdded: Date = Date(),
-    val profImgUrl: String = "",
-    val profileCompleted: Boolean = false,
+    val imgUrl: ArrayList<String> = ArrayList(),
 ) : Parcelable
