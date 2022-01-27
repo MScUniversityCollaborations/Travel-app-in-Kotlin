@@ -1,6 +1,8 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
 import android.app.Dialog
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.widget.Toast
@@ -69,4 +71,10 @@ open class BaseActivity : AppCompatActivity() {
             doubleBackToExitPressedOnce = false
         }, 2000, TimeUnit.MILLISECONDS)
     }
+
+    fun goToSettingsActivity(context: Context){
+        val intent = Intent(context, SettingsActivity::class.java)
+        startActivity(intent)
+    }
+
 }

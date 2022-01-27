@@ -57,6 +57,10 @@
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/drawer_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/tabs.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/drawable/selector_nav_bottom_profile.xml" value="0.5213541666666667" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.47708333333333336" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.5020833333333333" />
+        <entry key="app/src/main/res/menu/drawer_nav_menu.xml" value="0.5489583333333333" />
       </map>
     </option>
   </component>

@@ -10,22 +10,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CyprusTraveler">
-
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:exported="false" />
         <!-- region [START Activities] -->
-            <!-- Home/Main Activity -->
-            <activity
-                android:name=".ui.activities.MainActivity"
-                android:exported="true"
-                android:theme="@style/Theme.CyprusTraveler.NoActionBar"
-                android:label="@string/title_activity_main">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
+        <!-- Home/Main Activity -->
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.CyprusTraveler.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-            </activity>
-        <!-- endregion [END Activities] -->
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
