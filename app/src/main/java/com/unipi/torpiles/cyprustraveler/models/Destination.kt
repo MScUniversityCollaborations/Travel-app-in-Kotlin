@@ -15,7 +15,7 @@ import java.util.*
 @Parcelize // A Parcelable implementation is automatically generated.
 @IgnoreExtraProperties
 data class Destination(
-    val id: String = "",
+    var id: String = "",
 
     val name: ArrayList<String> = ArrayList(),
     val quickDesc: ArrayList<String> = ArrayList(),

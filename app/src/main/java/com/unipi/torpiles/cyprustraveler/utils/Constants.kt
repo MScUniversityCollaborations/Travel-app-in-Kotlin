@@ -10,12 +10,13 @@ object Constants {
 	val standardSimpleDateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.ENGLISH)
 
 	// Firebase Constants
-	// This is used for the collection name for USERS.
+	// Collections
 	const val COLLECTION_USERS: String = "users"
 	const val COLLECTION_CATEGORIES: String = "categories"
+	const val COLLECTION_DESTINATIONS: String = "destinations"
 
 	// Fields
-	const val FIELD_POPULARITY: String = "popularity"
+	const val FIELD_IN_FAVOURITES: String = "in"
 	const val FIELD_CATEGORY: String = "category"
 	const val FIELD_DATE_ADDED: String = "dateAdded"
 	const val FIELD_NAME: String = "name"

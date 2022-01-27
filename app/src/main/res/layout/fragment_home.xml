@@ -63,7 +63,7 @@
         <com.skydoves.androidveil.VeilRecyclerFrameView
             android:id="@+id/veilRecyclerView_Top_Destinations"
             android:layout_width="309dp"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:layout_marginTop="12dp"
             android:paddingStart="16dp"
             android:paddingEnd="0dp"
@@ -79,6 +79,21 @@
             app:veilFrame_radius="8dp"
             app:veilFrame_shimmerEnable="true"
             app:veilFrame_veiled="true" />
+
+        <include
+            android:id="@+id/layout_Empty_State_Top_Destinations"
+            layout="@layout/layout_empty_state_top_destinations"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:paddingEnd="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/veilRecyclerView_Top_Destinations"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_view_top_destinations" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

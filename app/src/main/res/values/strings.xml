@@ -50,5 +50,7 @@
     <string name="txt_profile">Profile</string>
     <string name="txt_favourites">Favourite Destinations</string>
     <string name="txt_loading">Loading…</string>
+    <string name="txt_no_top_dest_available">No Top Destinations!</string>
+    <string name="txt_check_again_another_time">Try again later.</string>
 
 </resources>

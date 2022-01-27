@@ -10,7 +10,7 @@ import com.unipi.torpiles.cyprustraveler.utils.GlideLoader
 
 
 /**
- * A adapter class for products list items.
+ * A adapter class for top destination list items.
  */
 open class TopDestinationListAdapter(
     private val context: Context,
@@ -21,7 +21,7 @@ open class TopDestinationListAdapter(
      * Inflates the item views which is designed in xml layout file
      *
      * create a new
-     * {@link ProductsViewHolder} and initializes some private fields to be used by RecyclerView.
+     * {@link TopDestinationsViewHolder} and initializes some private fields to be used by RecyclerView.
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopDestinationsViewHolder {
         return TopDestinationsViewHolder(
@@ -63,7 +63,8 @@ open class TopDestinationListAdapter(
                 }
             }
         }
-        // Click listener on list item click
+
+        // Click event on item click
         holder.itemView.setOnClickListener {
             // IntentUtils().goToDestinationDetailsActivity(context, model.id)
         }
