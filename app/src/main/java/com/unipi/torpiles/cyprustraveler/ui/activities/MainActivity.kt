@@ -14,6 +14,7 @@ import com.unipi.torpiles.cyprustraveler.databinding.ActivityMainBinding
 import com.unipi.torpiles.cyprustraveler.ui.fragments.FavouritesFragment
 import com.unipi.torpiles.cyprustraveler.ui.fragments.HomeFragment
 import com.unipi.torpiles.cyprustraveler.ui.fragments.ProfileFragment
+import com.unipi.torpiles.cyprustraveler.utils.IntentUtils
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -93,7 +94,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             R.id.nav_drawer_home -> binding.bottomNavigation.selectedItemId = R.id.nav_home
             R.id.nav_drawer_favourites -> binding.bottomNavigation.selectedItemId = R.id.nav_favourites
             R.id.nav_drawer_profile -> binding.bottomNavigation.selectedItemId = R.id.nav_profile
-            R.id.nav_drawer_settings -> BaseActivity().goToSettingsActivity(this@MainActivity)
+            R.id.nav_drawer_settings -> IntentUtils().goToSettingsActivity(this@MainActivity)
             R.id.nav_drawer_exit -> ActivityCompat.finishAffinity(this)
         }
 
