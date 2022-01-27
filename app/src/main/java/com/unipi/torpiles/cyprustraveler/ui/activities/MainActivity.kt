@@ -69,7 +69,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.apply {
             val toggle = ActionBarDrawerToggle(
                 this@MainActivity, drawerLayout, toolbar.root,
-                R.string.nav_drawer_close, R.string.nav_drawer_close
+                R.string.nav_drawer_close_res, R.string.nav_drawer_close_res
             )
             drawerLayout.addDrawerListener(toggle)
             toggle.drawerArrowDrawable.barLength = 64F

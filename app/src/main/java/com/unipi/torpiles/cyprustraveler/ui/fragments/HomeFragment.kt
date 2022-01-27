@@ -55,7 +55,7 @@ class HomeFragment : BaseFragment() {
 
             // Sets VeilRecyclerView's properties
             binding.veilRecyclerViewDestinations.run {
-                setVeilLayout(R.layout.shimmer_item_product)
+                setVeilLayout(R.layout.layout_shimmer_item_destination)
                 setAdapter(
                     DestinationListAdapter(
                         requireContext(),
@@ -94,7 +94,7 @@ class HomeFragment : BaseFragment() {
 
             // Sets VeilRecyclerView's properties
             binding.veilRecyclerViewTopDestinations.run {
-                setVeilLayout(R.layout.shimmer_item_product)
+                setVeilLayout(R.layout.layout_shimmer_item_destination)
                 setAdapter(
                     TopDestinationListAdapter(
                         requireContext(),

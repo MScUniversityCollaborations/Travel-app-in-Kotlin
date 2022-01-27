@@ -16,7 +16,7 @@
     <string name="txt_drawer_nav_category_general">General</string>
     <string name="txt_drawer_nav_category_account">Account</string>
     <string name="txt_drawer_nav_category_other">Other</string>
-    <string name="nav_drawer_close">Close</string>
+    <string name="nav_drawer_close_res" />
 
     // General
     <string name="txt_please_wait">Please Wait…</string>
