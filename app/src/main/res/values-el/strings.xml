@@ -32,6 +32,9 @@
     <string name="txt_edit">Επεξεργασία</string>
     <string name="txt_sign_out">Αποσύνδεση</string>
 
+    // Settings
+    <string name="txt_settings">Ρυθμίσεις</string>
+
     // Empty Layout
     <string name="txt_must_sign_in">Συνδεθείτε!</string>
     <string name="txt_must_sign_in_2">Πρέπει να συνδεθείτε για να προχωρήσετε.</string>
@@ -44,4 +47,5 @@
     <string name="txt_destinations">Προορισμοί</string>
     <string name="txt_profile">Προφίλ</string>
     <string name="txt_favourites">Αγαπημένοι Προορισμοί</string>
+
 </resources>
