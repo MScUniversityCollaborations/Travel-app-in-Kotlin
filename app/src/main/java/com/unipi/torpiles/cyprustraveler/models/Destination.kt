@@ -19,7 +19,7 @@ data class Destination(
 
     val name: ArrayList<String> = ArrayList(),
     val quickDesc: ArrayList<String> = ArrayList(),
-    val mapCords: String = "",
+    val mapCords: ArrayList<String> = ArrayList(),
     val desc: ArrayList<String> = ArrayList(),
     val category: ArrayList<String> = ArrayList(),
 
