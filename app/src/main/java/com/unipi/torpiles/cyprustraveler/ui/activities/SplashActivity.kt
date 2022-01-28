@@ -1,12 +1,16 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
+import Constants.ENGLISH_LANG
+import Constants.LANGUAGE
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.databinding.ActivitySplashBinding
+import com.unipi.torpiles.cyprustraveler.utils.SetLanguage
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
 
@@ -28,9 +32,21 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun init() {
+        Hawk.init(this).build();
+        checkForHawkKey()
+        SetLanguage().setUpLanguage(baseContext)
         hideSystemUI() // Hides the status bar and title from android UI.
         moveToNextActivity() // Moves to next activity in a specific amount of time after loading.
     }
+
+    private fun checkForHawkKey(){
+        if(Hawk.contains(LANGUAGE)){
+            return
+        }else{
+            Hawk.put(LANGUAGE, ENGLISH_LANG);
+        }
+    }
+
 
     private fun hideSystemUI() {
         @Suppress("DEPRECATION")

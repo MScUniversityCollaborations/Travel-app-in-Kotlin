@@ -2,6 +2,8 @@ package com.unipi.torpiles.cyprustraveler.ui.activities
 
 import Constants
 import Constants.EN
+import Constants.ENGLISH_LANG
+import Constants.LANGUAGE
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
@@ -12,6 +14,7 @@ import android.util.Log
 import android.view.ContextThemeWrapper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.R
 import java.util.*
 import java.util.concurrent.Executors
@@ -88,10 +91,13 @@ open class BaseActivity : AppCompatActivity() {
     //ABOUT LANGUAGE
     companion object {
         //var dLocale: Locale? = null
+
         var dLocale: Locale? = Locale(EN)
     }
 
     init {
+        //Hawk.init(applicationContext).build();
+
         updateConfig(this)
     }
 
@@ -101,6 +107,7 @@ open class BaseActivity : AppCompatActivity() {
             Log.e("BASE ACTIVITY", "return null" )
             return
         }
+
         Locale.setDefault(dLocale)
         val configuration = Configuration()
         configuration.setLocale(dLocale)

@@ -1,16 +1,16 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
-import Constants.EL
-import Constants.EN
 import Constants.ENGLISH_LANG
 import Constants.GREEK_LANG
 import Constants.LANGUAGE
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
-import androidx.preference.PreferenceManager
+import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.databinding.ActivitySettingsBinding
+import com.unipi.torpiles.cyprustraveler.utils.SetLanguage
 import java.util.*
 
 
@@ -33,8 +33,7 @@ class SettingsActivity : BaseActivity() {
     }
 
     private fun init(){
-        sharePrefLagnuage =  PreferenceManager.getDefaultSharedPreferences(this);
-        sharePrefNightMode =  PreferenceManager.getDefaultSharedPreferences(this);
+        Hawk.init(this).build()
     }
 
     private fun setupUI() {
@@ -49,18 +48,18 @@ class SettingsActivity : BaseActivity() {
                 Log.e("Settings Activity", "Radio Group En")
                 radioButtonGreek.isClickable = true
                 radioButtonEnglish.isClickable = false
-                //finish()
-                //recreate()
-                //startActivity(intent)
-                // reloadApp()
+                 finish()
+                 //recreate()
+                 //startActivity(intent)
+                 reloadApp()
             }
             radioButtonGreek.setOnClickListener {
                 Log.e("Settings Activity", "Radio Group El")
                 radioButtonGreek.isContextClickable = false
                 radioButtonEnglish.isClickable = true
-               // finish()
-                //recreate()
-                //reloadApp()
+                 finish()
+//                 recreate()
+                 reloadApp()
             }
         }
     }
@@ -70,34 +69,41 @@ class SettingsActivity : BaseActivity() {
                 when (checkedId) {
                     R.id.radioButtonGreek->{
                         Log.e("Settings Activity", GREEK_LANG)
-                        with(sharePrefLagnuage.edit()) {
+                        Hawk.put(LANGUAGE, GREEK_LANG);
+                   /*     with(sharePrefLagnuage.edit()) {
                             putString(LANGUAGE, GREEK_LANG)
                             apply()
-                        }
-                        dLocale = Locale(EL)
-
+                        }*/
                     }
 
                     R.id.radioButtonEnglish -> {
                         Log.e("Settings Activity", ENGLISH_LANG)
-                        with(sharePrefLagnuage.edit()) {
-                            putString(LANGUAGE, ENGLISH_LANG)
-                            apply()
-                        }
-                        dLocale = Locale(EN)
+                        Hawk.put(LANGUAGE, ENGLISH_LANG);
+//                        with(sharePrefLagnuage.edit()) {
+//                            putString(LANGUAGE, ENGLISH_LANG)
+//                            apply()
+//                        }
 
                     }
 
                 }
-
+                SetLanguage().setUpLanguage(baseContext)
             }
     }
 
     private fun setSettings(){
-        when(sharePrefLagnuage.getString(LANGUAGE,"")){
+        val language : String = Hawk.get(LANGUAGE)
+        when(language){
             GREEK_LANG-> binding.radioGroupLag.check(R.id.radioButtonGreek)
             ENGLISH_LANG->  binding.radioGroupLag.check(R.id.radioButtonEnglish)
         }
+    }
+
+    private fun reloadApp(){
+        val i = baseContext.packageManager
+            .getLaunchIntentForPackage(baseContext.packageName)
+        i!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(i)
     }
 
 }
