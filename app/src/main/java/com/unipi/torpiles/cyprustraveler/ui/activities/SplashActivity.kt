@@ -32,7 +32,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        Hawk.init(this).build();
+        Hawk.init(this).build()
         checkForHawkKey()
         SetLanguage().setUpLanguage(baseContext)
         hideSystemUI() // Hides the status bar and title from android UI.
@@ -43,7 +43,7 @@ class SplashActivity : AppCompatActivity() {
         if(Hawk.contains(LANGUAGE)){
             return
         }else{
-            Hawk.put(LANGUAGE, ENGLISH_LANG);
+            Hawk.put(LANGUAGE, ENGLISH_LANG)
         }
     }
 
