@@ -12,7 +12,6 @@ object Constants {
 	const val LANGUAGE : String = "language"
 	const val ENGLISH_LANG : String =  "English"
 	const val GREEK_LANG : String =  "Greek"
-	const val GERMAN_LANG : String =  "German"
 	const val EL : String = "el"
 	const val EN : String = "en"
 

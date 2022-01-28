@@ -20,11 +20,13 @@ class SetLanguage : Application() {
     }
 
     private fun init() {
-        Language(baseContext)
+        println("LANGUAGE CLASS: init()")
+        setUpLanguage(baseContext)
     }
 
-    fun Language(context: Context){
+     fun setUpLanguage(context: Context){
         val sharedPreferences = getDefaultSharedPreferences(context)
+        println("LANGUAGE CLASS: setUpLanguage()")
         Log.e("LANGUAGE CLASS", sharedPreferences.getString(LANGUAGE, "").toString())
         when(sharedPreferences.getString(LANGUAGE, "")){
             GREEK_LANG ->    BaseActivity.dLocale = Locale(EL)

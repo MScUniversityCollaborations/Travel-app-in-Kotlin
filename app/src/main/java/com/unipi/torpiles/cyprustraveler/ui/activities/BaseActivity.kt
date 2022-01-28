@@ -5,6 +5,7 @@ import android.app.Dialog
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.util.Log
 import android.view.ContextThemeWrapper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -84,12 +85,16 @@ open class BaseActivity : AppCompatActivity() {
         updateConfig(this)
     }
 
-    private fun updateConfig(wrapper: ContextThemeWrapper) {
-        if(dLocale==Locale(""))//If dLocale is null return
+     fun updateConfig(wrapper: ContextThemeWrapper) {
+        Log.e("BASE ACTIVITY", "updateConfig" )
+        if(dLocale==Locale("")){//If dLocale is null return
+            Log.e("BASE ACTIVITY", "return null" )
             return
+        }
         Locale.setDefault(dLocale)
         val configuration = Configuration()
         configuration.setLocale(dLocale)
         wrapper.applyOverrideConfiguration(configuration)
+         Log.e("BASE ACTIVITY", "end" )
     }
 }
