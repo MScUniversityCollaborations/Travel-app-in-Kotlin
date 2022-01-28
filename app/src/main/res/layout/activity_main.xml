@@ -63,5 +63,4 @@
         app:itemTextColor="@drawable/selector_drawer_color"
         app:menu="@menu/drawer_nav_menu" />
 
-
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -76,8 +75,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             toggle.drawerArrowDrawable.barThickness = 9F
             toggle.drawerArrowDrawable.gapSize = 12F
             // Change drawer arrow icon
-            toggle.drawerArrowDrawable.color =
-                ContextCompat.getColor(this@MainActivity, R.color.colorSecondary3)
+            /*toggle.drawerArrowDrawable.color =
+                ContextCompat.getColor(this@MainActivity, R.color.colorSecondary3)*/
             // Set navigation arrow icon
             toggle.setHomeAsUpIndicator(R.drawable.ic_list_indicator)
             toggle.syncState()

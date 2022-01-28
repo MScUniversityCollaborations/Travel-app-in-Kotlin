@@ -16,18 +16,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CyprusTraveler">
+
         <!-- region [START Activities] -->
+        <!-- Splash Screen Activity -->
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:theme="@style/Theme.CyprusTraveler.NoActionBar"
+            android:screenOrientation="fullSensor"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <!-- Home/Main Activity -->
         <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.CyprusTraveler.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
