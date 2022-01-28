@@ -28,28 +28,13 @@
         <item name="android:navigationBarColor">@color/colorBackground</item>
     </style>
 
-    <style name="Theme.CyprusTraveler.NoActionBar2">
+    <style name="Theme.CyprusTraveler.NoActionBar_2">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@color/colorBackground</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorContainer</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/colorNavigationBar</item>
-    </style>
-
-    <style name="Theme.CyprusTraveler.NoActionBar3">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@color/colorStatusBar</item>
         <item name="android:windowLightNavigationBar">true</item>
-        <item name="android:navigationBarColor">@color/colorSecondary3</item>
-    </style>
-
-    <style name="Theme.CyprusTraveler.NoActionBar4">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@color/colorStatusBar</item>
-        <item name="android:windowLightNavigationBar">true</item>
-        <item name="android:navigationBarColor">@color/colorNavigationBar</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
     </style>
 
 </resources>

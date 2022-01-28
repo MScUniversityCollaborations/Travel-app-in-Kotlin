@@ -123,27 +123,30 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private fun setCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_wrapper, fragment)
-            commit()
-        }
-        // Title bar title
-        binding.apply {
-            when (fragment) {
-                is HomeFragment -> {
-                    toolbar.textViewTitle.text = getString(R.string.txt_discover)
-                    navView.setCheckedItem(R.id.nav_drawer_home)
-                }
-                is FavouritesFragment -> {
-                    toolbar.textViewTitle.text = getString(R.string.txt_favourites)
-                    navView.setCheckedItem(R.id.nav_drawer_favourites)
-                }
-                is ProfileFragment -> {
-                    toolbar.textViewTitle.text = getString(R.string.txt_profile)
-                    navView.setCheckedItem(R.id.nav_drawer_profile)
+        if (!fragment.isRemoving) {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.fl_wrapper, fragment)
+                commit()
+            }
+            // Title bar title
+            binding.apply {
+                when (fragment) {
+                    is HomeFragment -> {
+                        toolbar.textViewTitle.text = getString(R.string.txt_discover)
+                        navView.setCheckedItem(R.id.nav_drawer_home)
+                    }
+                    is FavouritesFragment -> {
+                        toolbar.textViewTitle.text = getString(R.string.txt_favourites)
+                        navView.setCheckedItem(R.id.nav_drawer_favourites)
+                    }
+                    is ProfileFragment -> {
+                        toolbar.textViewTitle.text = getString(R.string.txt_profile)
+                        navView.setCheckedItem(R.id.nav_drawer_profile)
+                    }
                 }
             }
         }
+
     }
 
 

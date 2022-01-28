@@ -8,7 +8,6 @@
     tools:context=".ui.activities."
     tools:ignore="ContentDescription">
 
-
     <ImageView
         android:id="@+id/img_Header"
         android:layout_width="180dp"
