@@ -1,3 +1,5 @@
+import com.google.android.material.behavior.SwipeDismissBehavior
+import com.google.android.material.snackbar.BaseTransientBottomBar
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -7,6 +9,8 @@ object Constants {
 	const val TAG: String = "[Cyprus Traveler]"
 	const val CYPRUS_TRAVELER_PREFERENCES: String = "CyprusTravelerPrefs"
 	val standardSimpleDateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.ENGLISH)
+	val SNACKBAR_BEHAVIOR = BaseTransientBottomBar.Behavior().apply {
+		setSwipeDirection(SwipeDismissBehavior.SWIPE_DIRECTION_ANY) }
 
 	//LANGUAGE
 	const val LANGUAGE : String = "language"
@@ -19,16 +23,18 @@ object Constants {
 	// Collections
 	const val COLLECTION_USERS: String = "users"
 	const val COLLECTION_CATEGORIES: String = "categories"
+	const val COLLECTION_FAVOURITES: String = "favourites"
 	const val COLLECTION_DESTINATIONS: String = "destinations"
 
 	// Fields
 	const val FIELD_IN_FAVOURITES: String = "inFavourites"
-
+	const val FIELD_DATE_ADDED: String = "dateAdded"
+	const val FIELD_USER_ID: String = "userId"
 
 	// Intent Extras
-	const val EXTRA_PRODUCT_ID: String = "extraProductId"
-	const val EXTRA_ADDRESS_MODEL: String = "extra_address_model"
-	const val EXTRA_ADDRESS_DETAILS: String = "extra_address_details"
+	const val EXTRA_USER_DETAILS: String = "extraUserDetails"
+	const val EXTRA_REG_USERS_SNACKBAR: String = "extraShowRegisteredUserSnackbar"
+	const val EXTRA_USER_EMAIL: String = "extraUserEmail"
 
 	// Categories Constants
 	const val CATEGORY_BEACH = "beach"

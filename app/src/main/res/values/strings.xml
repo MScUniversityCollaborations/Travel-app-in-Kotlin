@@ -5,6 +5,9 @@
     <string name="title_activity_settings" translatable="false">MainSettings</string>
     <string name="title_home" translatable="false">Home</string>
 
+    // Splash screen
+    <string name="txt_your_gateway_to_memorable_escapes" translatable="false">Your gateway to memorable escapes.</string>
+
     // Bottom Nav
     <string name="menu_home">Home</string>
     <string name="menu_favourites">Favourites</string>
@@ -49,8 +52,8 @@
     <string name="txt_must_sign_in_2">You must sign in to see this.</string>
     <string name="txt_no_favorites">No favorites found!</string>
     <string name="txt_no_favorites_2">You haven\'t add anything to your favorites yet!</string>
-    <string name="button_sign_in">Sign In</string>
-    <string name="button_sign_up">Sign Up</string>
+    <string name="txt_sign_in">Sign In</string>
+    <string name="txt_sign_up">Sign Up</string>
     <string name="txt_destinations">Destinations</string>
     <string name="txt_profile">Profile</string>
     <string name="txt_favourites">Favourite Destinations</string>
@@ -61,7 +64,36 @@
     <string name="txt_language">Language</string>
     <string name="txt_appearance">Appearance</string>
     <string name="dark_mode">Night Mode</string>
-    <string name="txt_your_gateway_to_memorable_escapes">Your gateway to memorable escapes.</string>
 
+    <string name="txt_dismiss">Dismiss</string>
+    <string name="txt_edit_profile">Edit Profile</string>
+    <string name="input_txt_hint_full_name">Your name</string>
+    <string name="input_txt_hint_phone_number">Your phone number</string>
+    <string name="input_txt_hint_email">Your email address</string>
+    <string name="input_txt_hint_password">Your password</string>
+    <string name="txt_full_name">Full Name</string>
 
+    <string name="txt_error_registration_failed">An error has occurred with registration, please contact our support team.</string>
+    <string name="txt_error_empty_name">Please enter your full name.</string>
+    <string name="txt_error_empty_password">Please enter your password.</string>
+    <string name="txt_error_empty_email">Please enter your email.</string>
+    <string name="txt_error_empty_phone">Please enter your phone number.</string>
+    <string name="txt_password_reset_mail_sent">Email sent successfully to reset your password!</string>
+    <string name="txt_profile_updated">Your profile has been updated successfully!</string>
+    <string name="txt_congratulations">Congratulations!</string>
+    <string name="txt_congratulations_2">Your account has been created successfully!</string>
+    <string name="txt_forgot_password_question">Forgot password?</string>
+    <string name="txt_forgot_password">Forgot password</string>
+    <string name="button_send">Send</string>
+    <string name="txt_password_reset">Password Reset</string>
+    <string name="txt_enter_email_address_to_send_reset_code">Enter email address to send reset code.</string>
+
+    // Formats
+    <string name="txt_format_phone" translatable="false">+%1$s %2$s</string>
+
+    <string name="txt_none">None</string>
+    <string name="txt_don_t_have_an_account">Don\'t have an account? <b>Sign Up</b></string>
+    <string name="sign_in_act_header_2">Enter your email and password to continue.</string>
+    <string name="txt_lets_get_started">Let\'s get started</string>
+    <string name="txt_already_have_an_account">Already have an account? <b>Sign In</b></string>
 </resources>

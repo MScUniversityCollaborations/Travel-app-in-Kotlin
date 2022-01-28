@@ -10,7 +10,6 @@
 
     <application
         android:allowBackup="true"
-        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -46,6 +45,59 @@
             android:label="@string/title_activity_settings"
             android:theme="@style/Theme.CyprusTraveler.NoActionBar">
         </activity>
+
+        <!-- Sign In activity -->
+        <activity
+            android:name=".ui.activities.SignInActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.CyprusTraveler.NoActionBar"
+            android:parentActivityName=".ui.activities.MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activities.MainActivity" />
+        </activity>
+
+        <!-- Sign Up activity -->
+        <activity
+            android:name=".ui.activities.SignUpActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.CyprusTraveler.NoActionBar"
+            android:parentActivityName=".ui.activities.SignInActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activities.SignInActivity" />
+        </activity>
+
+        <!-- Forgot Password activity -->
+        <activity
+            android:name=".ui.activities.ForgotPasswordActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.CyprusTraveler.NoActionBar"
+            android:parentActivityName=".ui.activities.SignInActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activities.SignInActivity" />
+        </activity>
+
+        <!-- Update Profile activity -->
+        <activity
+            android:name=".ui.activities.EditProfileActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.CyprusTraveler.NoActionBar"
+            android:parentActivityName=".ui.activities.SignInActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activities.SignInActivity" />
+        </activity>
+        
     </application>
 
 </manifest>

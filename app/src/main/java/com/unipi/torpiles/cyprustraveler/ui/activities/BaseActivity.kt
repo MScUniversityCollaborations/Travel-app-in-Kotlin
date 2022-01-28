@@ -1,7 +1,10 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
+import Constants
 import Constants.EN
 import android.app.Dialog
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -53,6 +56,13 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     /**
+     * This function is used to dismiss the progress dialog if it is visible to user.
+     */
+    fun hideProgressDialog() {
+        mProgressDialog.dismiss()
+    }
+
+    /**
      * A function to implement the double back press feature to exit the app.
      */
     fun doubleBackToExit() {
@@ -96,5 +106,14 @@ open class BaseActivity : AppCompatActivity() {
         configuration.setLocale(dLocale)
         wrapper.applyOverrideConfiguration(configuration)
          Log.e("BASE ACTIVITY", "end" )
+    }
+
+    fun goToSignInActivity(context: Context, showRegisteredSnackBar: Boolean, userEmail: String) {
+        val intent = Intent(context, SignInActivity::class.java)
+        intent.putExtra(Constants.EXTRA_REG_USERS_SNACKBAR, showRegisteredSnackBar)
+        intent.putExtra(Constants.EXTRA_USER_EMAIL, userEmail)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        finish()
+        context.startActivity(intent)
     }
 }

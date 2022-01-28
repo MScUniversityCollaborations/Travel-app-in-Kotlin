@@ -6,28 +6,28 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.unipi.torpiles.cyprustraveler.R
-import com.unipi.torpiles.cyprustraveler.databinding.ItemDestinationBinding
-import com.unipi.torpiles.cyprustraveler.models.Destination
+import com.unipi.torpiles.cyprustraveler.databinding.ItemFavouriteDestinationBinding
+import com.unipi.torpiles.cyprustraveler.models.Favourite
 import com.unipi.torpiles.cyprustraveler.utils.GlideLoader
 
 
 /**
- * A adapter class for destination list items.
+ * A adapter class for products list items.
  */
-open class DestinationListAdapter(
+open class FavouritesListAdapter(
     private val context: Context,
-    private var list: ArrayList<Destination>
-) : RecyclerView.Adapter<DestinationListAdapter.DestinationsViewHolder>() {
+    private var list: ArrayList<Favourite>
+) : RecyclerView.Adapter<FavouritesListAdapter.FavouritesViewHolder>() {
 
     /**
      * Inflates the item views which is designed in xml layout file
      *
      * create a new
-     * {@link DestinationsViewHolder} and initializes some private fields to be used by RecyclerView.
+     * {@link ProductsViewHolder} and initializes some private fields to be used by RecyclerView.
      */
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DestinationsViewHolder {
-        return DestinationsViewHolder(
-            ItemDestinationBinding.inflate(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavouritesViewHolder {
+        return FavouritesViewHolder(
+            ItemFavouriteDestinationBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -45,7 +45,7 @@ open class DestinationListAdapter(
      * of the given type. You can either create a new View manually or inflate it from an XML
      * layout file.
      */
-    override fun onBindViewHolder(holder: DestinationsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FavouritesViewHolder, position: Int) {
         val model = list[position]
 
         holder.binding.apply {
@@ -92,5 +92,5 @@ open class DestinationListAdapter(
     /**
      * A ViewHolder describes an item view and metadata about its place within the RecyclerView.
      */
-    class DestinationsViewHolder(val binding: ItemDestinationBinding) : RecyclerView.ViewHolder(binding.root)
+    class FavouritesViewHolder(val binding: ItemFavouriteDestinationBinding) : RecyclerView.ViewHolder(binding.root)
 }

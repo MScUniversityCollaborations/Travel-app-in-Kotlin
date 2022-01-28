@@ -45,8 +45,8 @@
     <string name="txt_no_favorites">Δεν βρέθηκαν αγαπημένα!</string>
     <string name="txt_no_favorites_2">Δεν έχετε προσθέσει κάποιο προορισμό στα αγαπημένα σας ακόμη!</string>
 
-    <string name="button_sign_in">Σύνδεση</string>
-    <string name="button_sign_up">Εγγραφή</string>
+    <string name="txt_sign_in">Σύνδεση</string>
+    <string name="txt_sign_up">Εγγραφή</string>
 
     <string name="txt_destinations">Προορισμοί</string>
     <string name="txt_profile">Προφίλ</string>
@@ -56,4 +56,34 @@
     <string name="txt_appearance">Εμφάνιση</string>
     <string name="dark_mode">Νυχτερινό Θέμα</string>
 
+    <string name="txt_no_top_dest_available">Δεν υπάρχουν κορυφαίοι προορισμοί!</string>
+    <string name="txt_check_again_another_time">Δοκιμάστε ξανά αργότερα.</string>
+    <string name="txt_dismiss">Απόκρυψη</string>
+    <string name="txt_edit_profile">Επεξεργασία Προφίλ</string>
+    <string name="input_txt_hint_full_name">Το ον/πώνυμο σας</string>
+    <string name="input_txt_hint_phone_number">Ο αρ. τηλεφώνου σας</string>
+    <string name="input_txt_hint_email">Το email σας</string>
+    <string name="input_txt_hint_password">Ο κωδικός πρόσβασης σας</string>
+
+    <string name="txt_full_name">Ονοματεπώνυμο</string>
+    <string name="txt_error_registration_failed">Παρουσιάστηκε σφάλμα κατά την εγγραφή, επικοινωνήστε με την ομάδα υποστήριξής μας.</string>
+    <string name="txt_error_empty_name">Παρακαλώ εισάγετε το ονοματεπώνυμο σας.</string>
+    <string name="txt_error_empty_password">Παρακαλώ εισάγετε το κωδικό πρόσβασης σας.</string>
+    <string name="txt_error_empty_email">Παρακαλώ εισάγετε το email σας.</string>
+    <string name="txt_error_empty_phone">Παρακαλώ εισάγετε το αρ. τηλεφώνου σας.</string>
+    <string name="txt_password_reset_mail_sent">Το email στάλθηκε με επιτυχία για επαναφορά του κωδικού πρόσβασής σας!</string>
+    <string name="txt_profile_updated">Το προφίλ σας ενημερώθηκε επιτυχώς!</string>
+    <string name="txt_congratulations">Συγχαρητήρια!</string>
+    <string name="txt_congratulations_2">Ο λογαριασμός σας έχει δημιουργηθεί με επιτυχία!</string>
+    <string name="txt_forgot_password_question">Ανάκτηση Κωδικού</string>
+    <string name="txt_forgot_password">Ανάκτηση Κωδικού</string>
+    <string name="button_send">Αποστολή</string>
+    <string name="txt_password_reset">Επαναφορά Κωδικού</string>
+    <string name="txt_enter_email_address_to_send_reset_code">Εισαγάγετε το email σας για αποστολή κωδικού επαναφοράς.</string>
+
+    <string name="txt_none">Δεν δόθηκε</string>
+    <string name="txt_don_t_have_an_account">Δεν έχετε λογαριασμό; <b>Εγγραφείτε</b></string>
+    <string name="sign_in_act_header_2">Εισαγάγετε το email και τον κωδικό πρόσβασής σας για να συνεχίσετε.</string>
+    <string name="txt_lets_get_started">Ας ξεκινήσουμε</string>
+    <string name="txt_already_have_an_account">Έχετε ήδη λογαριασμό; <b>Συνδεθείτε</b></string>
 </resources>
