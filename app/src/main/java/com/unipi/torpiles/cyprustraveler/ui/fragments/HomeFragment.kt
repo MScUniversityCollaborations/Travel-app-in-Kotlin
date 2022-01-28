@@ -1,8 +1,6 @@
-package com.unipi.torpiles.cyprustraveler.ui.fragments;
+package com.unipi.torpiles.cyprustraveler.ui.fragments
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +32,8 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun init() {
-        veilRecyclers()
+        // veilRecyclers()
+
         loadDestinations()
         loadTopDestinations()
         setupClickListeners()
@@ -64,14 +63,15 @@ class HomeFragment : BaseFragment() {
                 )
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
                 getRecyclerView().setHasFixedSize(true)
-                addVeiledItems(3)
+                unVeil()
+                /*addVeiledItems(3)
                 // Delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
                     {
                         unveilRecyclers()
                     },
                     1000
-                )
+                )*/
             }
         }
         else
@@ -103,14 +103,16 @@ class HomeFragment : BaseFragment() {
                 )
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
                 getRecyclerView().setHasFixedSize(true)
-                addVeiledItems(5)
+                unVeil()
+
+                /*addVeiledItems(5)
                 // Delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
                     {
                         unveilRecyclers()
                     },
                     1000
-                )
+                )*/
             }
         } else {
             unveilRecyclers()

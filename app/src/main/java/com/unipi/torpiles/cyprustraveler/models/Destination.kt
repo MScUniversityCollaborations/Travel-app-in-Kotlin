@@ -28,4 +28,5 @@ data class Destination(
     @ServerTimestamp
     val dateAdded: Date = Date(),
     val imgUrl: ArrayList<String> = ArrayList(),
+
 ) : Parcelable

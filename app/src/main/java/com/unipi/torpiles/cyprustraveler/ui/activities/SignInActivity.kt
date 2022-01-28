@@ -2,11 +2,13 @@ package com.unipi.torpiles.cyprustraveler.ui.activities
 
 import Constants
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.animation.AnimationUtils
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
@@ -156,17 +158,19 @@ class SignInActivity : BaseActivity() {
         binding.toolbar.apply {
             setSupportActionBar(root)
             textViewActionBarLabel.text = getString(R.string.txt_sign_in)
+
         }
 
         val actionBar = supportActionBar
         actionBar?.let {
             it.setDisplayShowCustomEnabled(true)
             it.setDisplayHomeAsUpEnabled(true)
+            it.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.colorContainer)))
             it.setHomeAsUpIndicator(R.drawable.ic_chevron_left_24dp)
         }
     }
 
-    override fun onBackPressed() {
+    /*override fun onBackPressed() {
         IntentUtils().goToMainActivity(this@SignInActivity)
-    }
+    }*/
 }

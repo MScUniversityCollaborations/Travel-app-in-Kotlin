@@ -1,11 +1,13 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
 import Constants
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.animation.AnimationUtils
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.unipi.torpiles.cyprustraveler.R
@@ -201,6 +203,7 @@ class SignUpActivity : BaseActivity() {
         actionBar?.let {
             it.setDisplayShowCustomEnabled(true)
             it.setDisplayHomeAsUpEnabled(true)
+            it.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.colorContainer)))
             it.setHomeAsUpIndicator(R.drawable.ic_chevron_left_24dp)
         }
     }

@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../../layout/custom_preview.xml" value="0.259375" />
         <entry key="..\:/Downloads (860 EVO)/AndroidStudioProjects/CyprusTraveler/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable-night/ic_list_indicator.xml" value="0.1365" />
+        <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable-night/shape_container_all_corners.xml" value="0.1365" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable-night/shape_container_recycler_view_horizontal.xml" value="0.1365" />
+        <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable-night/shape_container_top.xml" value="0.1365" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/gradient_background.xml" value="0.2484375" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_beach.xml" value="0.2484375" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/ic_book_favourite.xml" value="0.15989583333333332" />
@@ -54,11 +55,13 @@
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_container_all_corners.xml" value="0.2484375" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_container_recycler_view_horizontal.xml" value="0.2484375" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_container_top.xml" value="0.23703703703703705" />
+        <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_container_weight.xml" value="0.1365" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_input_spinner.xml" value="0.23703703703703705" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_menu_rounded.xml" value="0.2484375" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_nav_rounded.xml" value="0.2484375" />
+        <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/drawable/shape_recycler_order.xml" value="0.1365" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/layout/activity_base.xml" value="0.21822916666666667" />
-        <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
+        <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/layout/activity_edit_profile.xml" value="0.264" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/layout/activity_forgot_password.xml" value="0.152" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/layout/activity_main2.xml" value="0.22056159420289856" />
@@ -96,7 +99,6 @@
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/drawer_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/tabs.xml" value="0.23229166666666667" />
-        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>

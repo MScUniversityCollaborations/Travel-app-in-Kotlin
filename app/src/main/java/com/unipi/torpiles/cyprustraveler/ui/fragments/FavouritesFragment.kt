@@ -1,4 +1,4 @@
-package com.unipi.torpiles.cyprustraveler.ui.fragments;
+package com.unipi.torpiles.cyprustraveler.ui.fragments
 
 import android.os.Bundle
 import android.os.Handler
@@ -12,6 +12,7 @@ import com.unipi.torpiles.cyprustraveler.adapters.FavouritesListAdapter
 import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
 import com.unipi.torpiles.cyprustraveler.databinding.FragmentFavouritesBinding
 import com.unipi.torpiles.cyprustraveler.models.Favourite
+import com.unipi.torpiles.cyprustraveler.utils.IntentUtils
 
 class FavouritesFragment : BaseFragment() {
     // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
@@ -37,12 +38,28 @@ class FavouritesFragment : BaseFragment() {
     }
 
     private fun loadFavorites() {
-        FirestoreHelper().getFavouritesList(this@FavouritesFragment)
+        // Check if the user is logged in, otherwise show the sign in state.
+        if (FirestoreHelper().getCurrentUserID() != "") {
+            FirestoreHelper().getFavouritesList(this@FavouritesFragment)
+        }
+        else // If user is not signed in
+            binding.apply {
+                // We make the sign in layout visible and add the button click listeners accordingly.
+                layoutMustBeSignedIn.apply {
+                    root.visibility = View.VISIBLE
+                    btnSignIn.setOnClickListener{
+                        IntentUtils().goToSignInActivity(this@FavouritesFragment.requireContext())
+                    }
+                    txtViewSignUp.setOnClickListener{
+                        IntentUtils().goToSignUpActivity(this@FavouritesFragment.requireContext())
+                    }
+                }
+            }
     }
     /**
-     * A function to get the successful product list from cloud firestore.
+     * A function to get the successful favourite list from cloud firestore.
      *
-     * @param favoritesList Will receive the product list from cloud firestore.
+     * @param favoritesList Will receive the favourite list from cloud firestore.
      */
     fun successFavouritesListFromFireStore(favoritesList: ArrayList<Favourite>) {
 

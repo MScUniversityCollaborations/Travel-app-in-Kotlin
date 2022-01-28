@@ -75,7 +75,7 @@ class ProfileFragment : BaseFragment() {
                         IntentUtils().goToSignInActivity(this@ProfileFragment.requireContext())
                     }
                     txtViewSignUp.setOnClickListener{
-                        IntentUtils().goToSignInActivity(this@ProfileFragment.requireContext())
+                        IntentUtils().goToSignUpActivity(this@ProfileFragment.requireContext())
                     }
                 }
             }

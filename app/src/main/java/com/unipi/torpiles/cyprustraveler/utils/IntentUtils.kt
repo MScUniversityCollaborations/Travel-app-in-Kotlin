@@ -5,10 +5,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import com.unipi.torpiles.cyprustraveler.models.User
-import com.unipi.torpiles.cyprustraveler.ui.activities.EditProfileActivity
-import com.unipi.torpiles.cyprustraveler.ui.activities.MainActivity
-import com.unipi.torpiles.cyprustraveler.ui.activities.SettingsActivity
-import com.unipi.torpiles.cyprustraveler.ui.activities.SignInActivity
+import com.unipi.torpiles.cyprustraveler.ui.activities.*
 
 class IntentUtils {
 
@@ -33,5 +30,9 @@ class IntentUtils {
 
     fun goToSignInActivity(context: Context) {
         context.startActivity(Intent(context, SignInActivity::class.java))
+    }
+
+    fun goToSignUpActivity(context: Context) {
+        context.startActivity(Intent(context, SignUpActivity::class.java))
     }
 }
