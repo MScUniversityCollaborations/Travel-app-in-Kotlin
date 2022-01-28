@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">Cyprus Traveler</string>
     // DEBUG - NO TRANSLATION
     <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="title_activity_settings" translatable="false">MainSettings</string>
     <string name="title_home" translatable="false">Home</string>
 
     // Bottom Nav
@@ -16,7 +17,7 @@
     <string name="txt_drawer_nav_category_general">General</string>
     <string name="txt_drawer_nav_category_account">Account</string>
     <string name="txt_drawer_nav_category_other">Other</string>
-    <string name="nav_drawer_close_res" />
+    <string name="nav_drawer_close_res" translatable="false" />
 
     // General
     <string name="txt_please_wait">Please Wait…</string>
