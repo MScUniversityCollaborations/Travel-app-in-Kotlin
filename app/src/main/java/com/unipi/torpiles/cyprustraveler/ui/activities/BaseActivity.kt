@@ -102,9 +102,9 @@ open class BaseActivity : AppCompatActivity() {
     }
 
      fun updateConfig(wrapper: ContextThemeWrapper) {
-        Log.e("BASE ACTIVITY", "updateConfig" )
+        //Log.e("BASE ACTIVITY", "updateConfig" )
         if(dLocale==Locale("")){//If dLocale is null return
-            Log.e("BASE ACTIVITY", "return null" )
+           // Log.e("BASE ACTIVITY", "return null" )
             return
         }
 
@@ -112,7 +112,6 @@ open class BaseActivity : AppCompatActivity() {
         val configuration = Configuration()
         configuration.setLocale(dLocale)
         wrapper.applyOverrideConfiguration(configuration)
-         Log.e("BASE ACTIVITY", "end" )
     }
 
     fun goToSignInActivity(context: Context, showRegisteredSnackBar: Boolean, userEmail: String) {
