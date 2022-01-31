@@ -88,28 +88,28 @@ class SettingsActivity : BaseActivity() {
 
     private fun setThemeMode(){
 
-        binding.switchNightMode.setOnCheckedChangeListener { _, _ ->
-                if (binding.switchNightMode.isChecked) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                }
-            }
+//        binding.switchNightMode.setOnCheckedChangeListener { _, _ ->
+//                if (binding.switchNightMode.isChecked) {
+//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//                } else {
+//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//                }
+//            }
     }
 
     private fun checkSystemTheme() {
 
-        Log.e("Settings Activity","Dark Theme: " + isDarkTheme())
-        when (isDarkTheme()) {
-            false -> {
-                // Night mode is not active, we're using the light theme
-                binding.switchNightMode.isChecked = false
-            }
-            true -> {
-                // Night mode is active, we're using dark theme
-                binding.switchNightMode.isChecked = true
-            }
-        }
+//        Log.e("Settings Activity","Dark Theme: " + isDarkTheme())
+//        when (isDarkTheme()) {
+//            false -> {
+//                // Night mode is not active, we're using the light theme
+//                binding.switchNightMode.isChecked = false
+//            }
+//            true -> {
+//                // Night mode is active, we're using dark theme
+//                binding.switchNightMode.isChecked = true
+//            }
+//        }
     }
 
 
