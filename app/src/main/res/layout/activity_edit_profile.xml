@@ -165,9 +165,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginBottom="32dp"
                     app:hintEnabled="false"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/frameLayout_User_Picture"
                     app:layout_constraintStart_toEndOf="@+id/countryCodePicker"
                     app:layout_constraintTop_toTopOf="@+id/countryCodePicker">
@@ -183,6 +181,31 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
+                <TextView
+                    android:id="@+id/text_view_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/core_sans_cr_55_medium"
+                    android:text="@string/txt_gender"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:layout_marginTop="29dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/countryCodePicker"
+                    app:layout_constraintTop_toBottomOf="@+id/inputTxtLayout_Phone_Number" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/shape_input_spinner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/text_view_gender"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_gender" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

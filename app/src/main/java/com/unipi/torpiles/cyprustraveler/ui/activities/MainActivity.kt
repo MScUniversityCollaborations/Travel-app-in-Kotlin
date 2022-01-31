@@ -93,7 +93,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             R.id.nav_drawer_home -> binding.bottomNavigation.selectedItemId = R.id.nav_home
             R.id.nav_drawer_favourites -> binding.bottomNavigation.selectedItemId = R.id.nav_favourites
             R.id.nav_drawer_profile -> binding.bottomNavigation.selectedItemId = R.id.nav_profile
-            R.id.nav_drawer_settings -> IntentUtils().goToSettingsActivity(this@MainActivity)
+            R.id.nav_drawer_settings -> {
+                IntentUtils().goToSettingsActivity(this@MainActivity)
+                return false
+            }
             R.id.nav_drawer_exit -> ActivityCompat.finishAffinity(this)
         }
 

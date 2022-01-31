@@ -173,6 +173,27 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/text_view_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:text="@string/txt_gender"
+                            android:textColor="@color/colorText"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/text_view_gender_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/core_sans_cr_55_medium"
+                            android:textColor="@color/colorText2"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
                             android:id="@+id/textView_Date_Registered"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

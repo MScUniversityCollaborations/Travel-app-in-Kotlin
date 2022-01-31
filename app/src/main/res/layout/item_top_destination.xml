@@ -6,11 +6,10 @@
     android:layout_width="190dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="0dp"
-    android:layout_marginEnd="8dp"
+    android:layout_marginEnd="20dp"
     app:cardBackgroundColor="@android:color/transparent"
     app:cardElevation="0dp"
     tools:ignore="ContentDescription">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -53,10 +52,10 @@
 
         <TextView
             android:id="@+id/text_view_destination_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:gravity="start"
             android:text="@string/txt_loading"
             android:textAlignment="textStart"
@@ -71,10 +70,10 @@
         <TextView
             android:id="@+id/text_view_destination_quick_desc"
             style="@style/TextViewRegular"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:ellipsize="end"
             android:gravity="start"
             android:maxLines="1"

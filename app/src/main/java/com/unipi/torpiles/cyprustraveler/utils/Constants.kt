@@ -8,7 +8,7 @@ object Constants {
 	// General Constants
 	const val TAG: String = "[Cyprus Traveler]"
 	const val CYPRUS_TRAVELER_PREFERENCES: String = "CyprusTravelerPrefs"
-	val standardSimpleDateFormat = SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.ENGLISH)
+	val STANDARD_SIMPLE_DATE_FORMAT = SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.ENGLISH)
 	val SNACKBAR_BEHAVIOR = BaseTransientBottomBar.Behavior().apply {
 		setSwipeDirection(SwipeDismissBehavior.SWIPE_DIRECTION_ANY) }
 

@@ -5,6 +5,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule
+import com.unipi.torpiles.cyprustraveler.R
 import java.io.IOException
 
 
@@ -24,7 +25,7 @@ class GlideLoader(val context: Context) : AppGlideModule() {
                 .with(context)
                 .load(image) // Uri or URL of the image
                 //.centerInside() // Scale type of the image.
-                // .placeholder(R.drawable.ic_user_sample) // A default place holder if image is failed to load.
+                .placeholder(R.drawable.ic_no_image_found) // A default place holder if image is failed to load.
                 .into(imageView) // the view in which the image will be loaded.
         } catch (e: IOException) {
             e.printStackTrace()
