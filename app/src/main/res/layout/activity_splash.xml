@@ -49,7 +49,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView_Header_1"
         app:layout_constraintTop_toBottomOf="@+id/textView_Header_1" />
 
-    <TextView
+<!--    <TextView
         android:id="@+id/text_view_loading"
         style="@style/TextViewMedium"
         android:layout_width="347dp"
@@ -62,15 +62,15 @@
         android:textColor="@color/colorSecondary5"
         app:layout_constraintEnd_toEndOf="@+id/textView_Header_2"
         app:layout_constraintStart_toStartOf="@+id/textView_Header_2"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Header_2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_Header_2" />-->
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="75dp"
         android:src="@drawable/gif_dual_ring_progress_circle"
-        app:layout_constraintEnd_toEndOf="@+id/text_view_loading"
-        app:layout_constraintStart_toStartOf="@+id/text_view_loading"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_loading" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Header_2" />
     
 </androidx.constraintlayout.widget.ConstraintLayout>
