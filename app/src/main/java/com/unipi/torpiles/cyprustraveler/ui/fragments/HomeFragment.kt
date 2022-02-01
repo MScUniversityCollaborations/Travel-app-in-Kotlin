@@ -1,8 +1,6 @@
 package com.unipi.torpiles.cyprustraveler.ui.fragments
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -72,14 +70,14 @@ class HomeFragment : BaseFragment() {
                 getRecyclerView().setHasFixedSize(true)
                 unVeil()
 
-                addVeiledItems(3)
+                /*addVeiledItems(3)
                 // Delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
                     {
                         unVeil()
                     },
                     1000
-                )
+                )*/
             }
         }
         else
