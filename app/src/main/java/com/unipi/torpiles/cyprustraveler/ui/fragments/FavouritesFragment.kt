@@ -78,6 +78,7 @@ class FavouritesFragment : BaseFragment() {
                 )
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false))
                 getRecyclerView().setHasFixedSize(true)
+
                 addVeiledItems(5)
                 // delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(

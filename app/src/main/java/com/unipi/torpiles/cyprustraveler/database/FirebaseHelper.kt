@@ -2,12 +2,15 @@ package com.unipi.torpiles.cyprustraveler.database
 
 import Constants
 import android.app.Activity
+import android.net.Uri
 import android.util.Log
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.SetOptions
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.unipi.torpiles.cyprustraveler.models.Destination
 import com.unipi.torpiles.cyprustraveler.models.Favourite
 import com.unipi.torpiles.cyprustraveler.models.User
@@ -131,12 +134,12 @@ class FirestoreHelper {
             }
     }
 
-    fun updateProfile(activity: EditProfileActivity, userInfo: User) {
+    fun updateProfile(activity: EditProfileActivity, userHashMap: HashMap<String, Any>) {
 
         dbFirestore.collection(Constants.COLLECTION_USERS)
             .document(getCurrentUserID())
             // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge
-            .set(userInfo, SetOptions.merge())
+            .set(userHashMap, SetOptions.merge())
             .addOnSuccessListener {
 
                 // Here call a function of base activity for transferring the result to it.
@@ -290,4 +293,56 @@ class FirestoreHelper {
                 Log.e("Get Favourites List", "Error while getting favourite destination list.", e)
             }
     }
+
+    // A function to upload the image to the cloud storage.
+    fun uploadImageToCloudStorage(activity: Activity, imageFileURI: Uri?, imageType: String) {
+
+        //getting the storage reference
+        val sRef: StorageReference = FirebaseStorage.getInstance().reference.child(
+            imageType + System.currentTimeMillis() + "."
+                    + Constants.getFileExtension(
+                activity,
+                imageFileURI
+            )
+        )
+
+        //adding the file to reference
+        sRef.putFile(imageFileURI!!)
+            .addOnSuccessListener { taskSnapshot ->
+                // The image upload is success
+                Log.e(
+                    "Firebase Image URL",
+                    taskSnapshot.metadata!!.reference!!.downloadUrl.toString()
+                )
+
+                // Get the downloadable url from the task snapshot
+                taskSnapshot.metadata!!.reference!!.downloadUrl
+                    .addOnSuccessListener { uri ->
+                        Log.e("Downloadable Image URL", uri.toString())
+
+                        // Here call a function of base activity for transferring the result to it.
+                        when (activity) {
+                            is EditProfileActivity -> {
+                                activity.imageUploadSuccess(uri.toString())
+                            }
+                        }
+                    }
+            }
+            .addOnFailureListener { exception ->
+
+                // Hide the progress dialog if there is any error. And print the error in log.
+                when (activity) {
+                    is EditProfileActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                }
+
+                Log.e(
+                    activity.javaClass.simpleName,
+                    exception.message,
+                    exception
+                )
+            }
+    }
+
 }

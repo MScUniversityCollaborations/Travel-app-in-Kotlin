@@ -3,19 +3,17 @@ package com.unipi.torpiles.cyprustraveler.ui.activities
 import Constants.ENGLISH_LANG
 import Constants.GREEK_LANG
 import Constants.LANGUAGE
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.databinding.ActivitySettingsBinding
 import com.unipi.torpiles.cyprustraveler.utils.SetLanguage
-import java.lang.Boolean.FALSE
-import java.lang.Boolean.TRUE
 
 
 class SettingsActivity : BaseActivity() {
@@ -27,9 +25,10 @@ class SettingsActivity : BaseActivity() {
 
         binding = ActivitySettingsBinding.inflate(layoutInflater)
 
+        setContentView(binding.root)
+
         init()
         setupUI()
-        setContentView(binding.root)
 
     }
 
@@ -43,6 +42,7 @@ class SettingsActivity : BaseActivity() {
         setThemeMode()
         setupClickListeners()
         setSettings()
+        setupActionBar()
     }
 
     private fun setupClickListeners() {
@@ -128,4 +128,16 @@ class SettingsActivity : BaseActivity() {
         startActivity(i)
     }
 
+    private fun setupActionBar() {
+        setSupportActionBar(binding.toolbar.root)
+
+        val actionBar = supportActionBar
+
+        actionBar?.let {
+            it.setDisplayShowCustomEnabled(true)
+            it.setDisplayHomeAsUpEnabled(true)
+            it.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.colorContainer)))
+            it.setHomeAsUpIndicator(R.drawable.ic_chevron_left_24dp)
+        }
+    }
 }

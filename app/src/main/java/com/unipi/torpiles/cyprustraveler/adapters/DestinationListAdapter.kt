@@ -5,7 +5,6 @@ import Constants.ENGLISH_LANG
 import Constants.GREEK_LANG
 import Constants.LANGUAGE
 import android.content.Context
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +13,6 @@ import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.databinding.ItemDestinationBinding
 import com.unipi.torpiles.cyprustraveler.models.Destination
 import com.unipi.torpiles.cyprustraveler.utils.GlideLoader
-import java.security.AccessController.getContext
 
 
 /**
@@ -22,9 +20,8 @@ import java.security.AccessController.getContext
  */
 open class DestinationListAdapter(
     private val context: Context,
-    private var list: ArrayList<Destination>
+    private var list: ArrayList<Destination>,
 ) : RecyclerView.Adapter<DestinationListAdapter.DestinationsViewHolder>() {
-
     /**
      * Inflates the item views which is designed in xml layout file
      *
@@ -53,15 +50,6 @@ open class DestinationListAdapter(
      */
     override fun onBindViewHolder(holder: DestinationsViewHolder, position: Int) {
         val model = list[position]
-
-        if (position == 0) {
-            val params = holder.itemView.layoutParams as RecyclerView.LayoutParams
-            val marginInDp = TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 30F, context.resources.displayMetrics
-            ).toInt()
-            params.marginStart = marginInDp
-            holder.itemView.layoutParams = params
-        }
 
         holder.binding.apply {
             GlideLoader(context).loadDestinationPicture(

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,88 +10,114 @@
     tools:context=".ui.activities.SettingsActivity"
     tools:ignore="contentDescription">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar_settings"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0.0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="wrap_content">
 
-        <RadioGroup
-            android:id="@+id/radioGroupLag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:background="#024CAF50"
-            android:checkedButton="@+id/radioButtonEnglish"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_lang">
-
-            <RadioButton
-                android:id="@+id/radioButtonGreek"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/core_sans_cr_65_bold"
-                android:text="@string/txt_greek"
-                android:textSize="18sp" />
+                android:background="@drawable/shape_container_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <RadioButton
-                android:id="@+id/radioButtonEnglish"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/core_sans_cr_65_bold"
-                android:text="@string/txt_english"
-                android:textSize="18sp" />
+                <RadioGroup
+                    android:id="@+id/radioGroupLag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="32dp"
+                    android:checkedButton="@+id/radioButtonEnglish"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_lang">
 
-        </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/radioButtonGreek"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_greece"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/core_sans_cr_65_bold"
+                        android:text="@string/txt_greek"
+                        android:textSize="18sp" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView_appearance"
-            style="@style/TextViewBold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/txt_appearance"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            tools:ignore="MissingConstraints" />
+                    <RadioButton
+                        android:id="@+id/radioButtonEnglish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:drawableStart="@drawable/ic_united_kingdom"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/core_sans_cr_65_bold"
+                        android:text="@string/txt_english"
+                        android:textSize="18sp" />
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch_night_mode"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/core_sans_cr_65_bold"
-            android:switchPadding="100dp"
-            android:text="@string/dark_mode"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/textView_appearance"
-            app:layout_constraintTop_toBottomOf="@+id/textView_appearance"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+                </RadioGroup>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textView_lang"
-            style="@style/TextViewBold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/txt_language"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch_night_mode" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_appearance"
+                    style="@style/TextViewBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="29dp"
+                    android:text="@string/txt_appearance"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_night_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/core_sans_cr_65_bold"
+                    android:switchPadding="100dp"
+                    android:text="@string/dark_mode"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView_appearance"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_appearance"
+                    tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-</androidx.core.widget.NestedScrollView>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView_lang"
+                    style="@style/TextViewBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="29dp"
+                    android:text="@string/txt_language"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/switch_night_mode" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

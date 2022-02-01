@@ -22,29 +22,11 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <TextView
-            android:id="@+id/txt_Header_1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="29dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/core_sans_cr_45_regular"
-            android:text="@string/txt_sign_in"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorText"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/txt_Header_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/core_sans_cr_45_regular"
             android:text="@string/sign_in_act_header_2"
@@ -54,12 +36,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_Header_1" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputTxtLayout_Email"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            style="@style/TextEditInputStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="39dp"
@@ -71,6 +53,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputTxt_Email"
+                style="@style/TextEditInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/core_sans_cr_55_medium"
@@ -98,6 +81,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputTxt_Password"
+                style="@style/TextEditInputStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/core_sans_cr_55_medium"

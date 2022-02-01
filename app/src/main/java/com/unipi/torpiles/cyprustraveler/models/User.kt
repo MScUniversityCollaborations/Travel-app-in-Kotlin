@@ -21,10 +21,10 @@ data class User(
     val email: String = "",
     val phoneNumber: String = "",
     val phoneCode: Int = 0,
-    val gender: String = "",
+    val gender: Int = -1,
 
     @ServerTimestamp
     val dateRegistered: Date = Date(),
-    val profImgUrl: String = "",
+    val imgUrl: String = "",
     val profileCompleted: Boolean = false,
 ) : Parcelable

@@ -13,16 +13,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatImageButton
+                <ImageButton
                     android:id="@+id/imgBtn_Save"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginEnd="14dp"
                     android:adjustViewBounds="true"
-                    android:background="@drawable/shape_btn"
-                    android:scaleType="center"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/ic_check_mark"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

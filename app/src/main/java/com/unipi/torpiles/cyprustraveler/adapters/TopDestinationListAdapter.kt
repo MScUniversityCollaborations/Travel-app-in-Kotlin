@@ -4,7 +4,6 @@ import Constants.ENGLISH_LANG
 import Constants.GREEK_LANG
 import Constants.LANGUAGE
 import android.content.Context
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -50,15 +49,6 @@ open class TopDestinationListAdapter(
      */
     override fun onBindViewHolder(holder: TopDestinationsViewHolder, position: Int) {
         val model = list[position]
-
-        if (position == 0) {
-            val params = holder.itemView.layoutParams as RecyclerView.LayoutParams
-            val marginInDp = TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 20F, context.resources.displayMetrics
-            ).toInt()
-            params.marginStart = marginInDp
-            holder.itemView.layoutParams = params
-        }
 
         holder.binding.apply {
             GlideLoader(context).loadDestinationPicture(

@@ -12,6 +12,7 @@ import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
 import com.unipi.torpiles.cyprustraveler.databinding.FragmentProfileBinding
 import com.unipi.torpiles.cyprustraveler.models.User
 import com.unipi.torpiles.cyprustraveler.ui.activities.MainActivity
+import com.unipi.torpiles.cyprustraveler.utils.GlideLoader
 import com.unipi.torpiles.cyprustraveler.utils.IntentUtils
 
 class ProfileFragment : BaseFragment() {
@@ -110,6 +111,16 @@ class ProfileFragment : BaseFragment() {
                 else
                     textViewPhoneValue.text = mUserDetails.phoneNumber
             else textViewPhoneValue.text = getString(R.string.txt_none)
+
+            when (mUserDetails.gender) {
+                -1 -> textViewGenderValue.text = getString(R.string.txt_none)
+                0 -> textViewGenderValue.text = getString(R.string.txt_male)
+                1 -> textViewGenderValue.text = getString(R.string.txt_female)
+            }
+
+            if (mUserDetails.imgUrl != "")
+                GlideLoader(this@ProfileFragment.requireContext())
+                    .loadUserPicture(mUserDetails.imgUrl, imgUserPictureFrame)
         }
 
         unveilDetails()

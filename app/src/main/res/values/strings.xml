@@ -97,4 +97,8 @@
     <string name="txt_lets_get_started">Let\'s get started</string>
     <string name="txt_already_have_an_account">Already have an account? <b>Sign In</b></string>
     <string name="txt_gender">Gender</string>
+    <string name="image_selection_failed">Image selection cancelled</string>
+    <string name="read_storage_permission_denied">Oops, you just denied the permission for storage. You can also allow it from settings.</string>
+    <string name="txt_male">Male</string>
+    <string name="txt_female">Female</string>
 </resources>
