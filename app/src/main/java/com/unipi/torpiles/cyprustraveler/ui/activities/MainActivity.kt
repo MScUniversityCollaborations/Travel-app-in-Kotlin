@@ -128,8 +128,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
 
     private fun replaceFragment(fragment: Fragment) {
-
-        replaceFragment(R.id.fl_wrapper, fragment)
+        if (!fragment.isRemoving)
+            replaceFragment(R.id.fl_wrapper, fragment)
 
         // Title bar title
         binding.apply {
