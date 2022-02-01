@@ -11,6 +11,7 @@ import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.databinding.ItemTopDestinationBinding
 import com.unipi.torpiles.cyprustraveler.models.Destination
 import com.unipi.torpiles.cyprustraveler.utils.GlideLoader
+import com.unipi.torpiles.cyprustraveler.utils.IntentUtils
 
 
 /**
@@ -71,7 +72,7 @@ open class TopDestinationListAdapter(
 
         // Click event on item click
         holder.itemView.setOnClickListener {
-            // IntentUtils().goToDestinationDetailsActivity(context, model.id)
+            IntentUtils().goToDestinationDetailsActivity(context, model.id)
         }
     }
 

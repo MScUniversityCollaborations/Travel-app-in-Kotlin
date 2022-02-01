@@ -15,19 +15,15 @@ import java.util.*
 @Parcelize // A Parcelable implementation is automatically generated.
 @IgnoreExtraProperties
 data class Favourite(
-    var id: String = "",
-
     var userId: String = "",
+    var destinationId: String = "",
 
     val name: ArrayList<String> = ArrayList(),
     val quickDesc: ArrayList<String> = ArrayList(),
-    val mapCords: ArrayList<String> = ArrayList(),
-    val desc: ArrayList<String> = ArrayList(),
     val category: ArrayList<String> = ArrayList(),
-    var clicks: Int = 0,
-    var inFavourites: Int = 0,
+    val imgUrl: ArrayList<String> = ArrayList(),
 
     @ServerTimestamp
     val dateAdded: Date = Date(),
-    val imgUrl: ArrayList<String> = ArrayList(),
+    var id: String = "",
 ) : Parcelable

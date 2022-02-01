@@ -3,10 +3,13 @@ package com.unipi.torpiles.cyprustraveler.ui.activities
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.databinding.ActivityMainBinding
@@ -30,8 +33,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         setupUI()
 
-        setCurrentFragment(homeFragment)
-
+        binding.bottomNavigation.selectedItemId = R.id.nav_home
+        // replaceFragment(homeFragment)
     }
 
     private fun setupBottomNavigationBar() {
@@ -40,15 +43,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 setOnItemSelectedListener {
                     when (it.itemId) {
                         R.id.nav_home -> {
-                            setCurrentFragment(homeFragment)
+                            replaceFragment(homeFragment)
                             badgeClear(R.id.nav_home)
                         }
                         R.id.nav_favourites -> {
-                            setCurrentFragment(favouritesFragment)
+                            replaceFragment(favouritesFragment)
                             badgeClear(R.id.nav_favourites)
                         }
                         R.id.nav_profile -> {
-                            setCurrentFragment(profileFragment)
+                            replaceFragment(profileFragment)
                             badgeClear(R.id.nav_profile)
                         }
                     }
@@ -60,8 +63,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private fun setupUI() {
-        setupBottomNavigationBar()
         setupNavDrawer()
+        setupBottomNavigationBar()
     }
 
     private fun setupNavDrawer() {
@@ -74,15 +77,12 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             toggle.drawerArrowDrawable.barLength = 64F
             toggle.drawerArrowDrawable.barThickness = 9F
             toggle.drawerArrowDrawable.gapSize = 12F
-            // Change drawer arrow icon
-            /*toggle.drawerArrowDrawable.color =
-                ContextCompat.getColor(this@MainActivity, R.color.colorSecondary3)*/
+
             // Set navigation arrow icon
             toggle.setHomeAsUpIndicator(R.drawable.ic_list_indicator)
             toggle.syncState()
 
             navView.setNavigationItemSelectedListener(this@MainActivity)
-            navView.setCheckedItem(R.id.nav_drawer_profile)
         }
     }
 
@@ -105,15 +105,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         return true
     }
 
-    private fun badgeSetup(id: Int, alerts: Int) {
-        binding.apply {
-            val badge = bottomNavigation.getOrCreateBadge(id)
-            badge.isVisible = true
-            badge.number = alerts
-        }
-
-    }
-
     private fun badgeClear(id: Int) {
         binding.apply {
             val badgeDrawable = bottomNavigation.getBadge(id)
@@ -125,33 +116,55 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     }
 
-    private fun setCurrentFragment(fragment: Fragment) {
-        if (!fragment.isRemoving) {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.fl_wrapper, fragment)
-                commit()
-            }
-            // Title bar title
-            binding.apply {
-                when (fragment) {
-                    is HomeFragment -> {
-                        toolbar.textViewTitle.text = getString(R.string.txt_discover)
-                        navView.setCheckedItem(R.id.nav_drawer_home)
-                    }
-                    is FavouritesFragment -> {
-                        toolbar.textViewTitle.text = getString(R.string.txt_favourites)
-                        navView.setCheckedItem(R.id.nav_drawer_favourites)
-                    }
-                    is ProfileFragment -> {
-                        toolbar.textViewTitle.text = getString(R.string.txt_profile)
-                        navView.setCheckedItem(R.id.nav_drawer_profile)
-                    }
+    private inline fun FragmentManager.doTransaction(func: FragmentTransaction.() ->
+    FragmentTransaction
+    ) {
+        beginTransaction().func().commit()
+    }
+
+    private fun AppCompatActivity.replaceFragment(frameId: Int, fragment: Fragment) {
+        supportFragmentManager.doTransaction{replace(frameId, fragment)}
+    }
+
+
+    private fun replaceFragment(fragment: Fragment) {
+
+        replaceFragment(R.id.fl_wrapper, fragment)
+
+        // Title bar title
+        binding.apply {
+            when (fragment) {
+                is HomeFragment -> {
+                    toolbar.textViewTitle.text = getString(R.string.txt_discover)
+                    navView.setCheckedItem(R.id.nav_drawer_home)
+                }
+                is FavouritesFragment -> {
+                    toolbar.textViewTitle.text = getString(R.string.txt_favourites)
+                    navView.setCheckedItem(R.id.nav_drawer_favourites)
+                }
+                is ProfileFragment -> {
+                    toolbar.textViewTitle.text = getString(R.string.txt_profile)
+                    navView.setCheckedItem(R.id.nav_drawer_profile)
                 }
             }
         }
-
     }
 
+    /*fun AppCompatActivity.addFragment(frameId: Int, fragment: Fragment){
+        supportFragmentManager.doTransaction { add(frameId, fragment) }
+    }
+
+    fun AppCompatActivity.removeFragment(fragment: Fragment) {
+        supportFragmentManager.doTransaction{remove(fragment)}
+    }
+
+    private fun badgeSetup(id: Int, alerts: Int) {
+        binding.apply {
+            val badge = bottomNavigation.getOrCreateBadge(id)
+            badge.isVisible = true
+            badge.number = alerts
+        }
+    }*/
 
     override fun onBackPressed() {
         doubleBackToExit()

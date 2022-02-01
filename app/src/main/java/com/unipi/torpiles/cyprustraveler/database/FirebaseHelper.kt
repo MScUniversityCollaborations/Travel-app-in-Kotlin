@@ -14,6 +14,7 @@ import com.google.firebase.storage.StorageReference
 import com.unipi.torpiles.cyprustraveler.models.Destination
 import com.unipi.torpiles.cyprustraveler.models.Favourite
 import com.unipi.torpiles.cyprustraveler.models.User
+import com.unipi.torpiles.cyprustraveler.ui.activities.DestinationDetailsActivity
 import com.unipi.torpiles.cyprustraveler.ui.activities.EditProfileActivity
 import com.unipi.torpiles.cyprustraveler.ui.activities.SignInActivity
 import com.unipi.torpiles.cyprustraveler.ui.activities.SignUpActivity
@@ -27,7 +28,6 @@ class FirestoreHelper {
     private val dbFirestore = FirebaseFirestore.getInstance()
 
 
-    // region -User Management-
     /**
      * A function to get the user id of current logged user.
      */
@@ -42,6 +42,52 @@ class FirestoreHelper {
         }
 
         return currentUserID
+    }
+
+    /**
+     * A function to add a destination to current logged user's favourites.
+     */
+    fun addToFavourites(activity: Activity, favourite: Favourite) {
+        dbFirestore.collection(Constants.COLLECTION_FAVOURITES)
+            .document()
+            .set(favourite, SetOptions.merge())
+            .addOnFailureListener { e ->
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while adding a destination to user's favourites.",
+                    e)
+            }
+    }
+
+    /**
+     * A function to delete a destination to current logged user's favourites.
+     */
+    fun deleteFavourite(activity: Activity, destinationId: String) {
+        dbFirestore.collection(Constants.COLLECTION_FAVOURITES)
+            .whereEqualTo(Constants.FIELD_USER_ID, getCurrentUserID())
+            .whereEqualTo(Constants.FIELD_DESTINATION_ID, destinationId)
+            .get()
+            .addOnCompleteListener{ task ->
+                if (task.isSuccessful) {
+                    for (document in task.result!!) {
+                        dbFirestore
+                            .collection(Constants.COLLECTION_FAVOURITES)
+                            .document(document.id)
+                            .delete()
+                    }
+                }
+                else {
+                    Log.d(activity.javaClass.simpleName,
+                        "Error getting documents for deletion: ",
+                        task.exception)
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while getting destination details from user's favourites.",
+                    e)
+            }
     }
 
     /**
@@ -262,6 +308,34 @@ class FirestoreHelper {
             }
     }
 
+    /**
+     * A function to get destination details based on the product id.
+     */
+    fun getDestinationDetails(activity: Activity, destinationId: String) {
+        dbFirestore.collection(Constants.COLLECTION_DESTINATIONS)
+            .document(destinationId)
+            .get() // Will get the document snapshots.
+            .addOnSuccessListener { document ->
+
+                // Here we get destination details in the form of document.
+                Log.d(activity.javaClass.simpleName, document.toString())
+
+                // Convert the snapshot to the object of Destination data model class.
+                val destination = document.toObject(Destination::class.java)!!
+
+                when (activity) {
+                    is DestinationDetailsActivity -> activity.successDestinationDetailsFromFirestore(destination)
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while getting destination details.",
+                    e
+                )
+            }
+    }
+
     fun getFavouritesList(fragmentFavourites: FavouritesFragment) {
 
         dbFirestore.collection(Constants.COLLECTION_FAVOURITES)
@@ -291,6 +365,38 @@ class FirestoreHelper {
                 // TODO: Show error state maybe
 
                 Log.e("Get Favourites List", "Error while getting favourite destination list.", e)
+            }
+    }
+
+    fun getFavouriteDestination(activity: Activity, destinationId: String) {
+        dbFirestore.collection(Constants.COLLECTION_DESTINATIONS)
+            .whereEqualTo(Constants.FIELD_USER_ID, getCurrentUserID())
+            .whereEqualTo(Constants.FIELD_DESTINATION_ID, destinationId)
+            .get() // Will get the documents snapshots.
+            .addOnCompleteListener { task ->
+
+                if (task.result!!.isEmpty) {
+                    when (activity) {
+                        // Here we will send an empty class just to handle the destination not in our favourites.
+                        is DestinationDetailsActivity -> activity.successFavouriteDestinationFromFirestore(Favourite())
+                    }
+                    return@addOnCompleteListener
+                }
+                if (task.isSuccessful) {
+                    for (document in task.result!!) {
+                        // Here we get the list of boards in the form of documents.
+                        Log.d("Favourite Product", document.toString())
+
+                        val favourite: Favourite = document.toObject(Favourite::class.java)
+
+                        when (activity) {
+                            is DestinationDetailsActivity -> activity.successFavouriteDestinationFromFirestore(favourite)
+                        }
+                    }
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.e("Get Favourites", "Error while checking if destination is in user's favourites.", e)
             }
     }
 

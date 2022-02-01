@@ -51,6 +51,18 @@
                 android:value=".ui.activities.MainActivity" />
         </activity>
 
+        <!-- Destination Details Activity -->
+        <activity
+            android:name=".ui.activities.DestinationDetailsActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.activities.MainActivity"
+            android:theme="@style/Theme.CyprusTraveler.NoActionBar_2">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activities.MainActivity" />
+        </activity>
+
         <!-- Sign In activity -->
         <activity
             android:name=".ui.activities.SignInActivity"

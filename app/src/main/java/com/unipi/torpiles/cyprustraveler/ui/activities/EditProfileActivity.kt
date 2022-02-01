@@ -152,6 +152,10 @@ class EditProfileActivity : BaseActivity() {
                 userHashMap[Constants.FIELD_GENDER] = gender
             }
 
+            if (inputPhoneCode != 0) {
+                userHashMap[Constants.FIELD_PHONE_CODE] = inputPhoneCode
+            }
+
             // Here if user is about to complete the profile then update the field or else no need.
             // false: User profile is incomplete.
             // true: User profile is completed.

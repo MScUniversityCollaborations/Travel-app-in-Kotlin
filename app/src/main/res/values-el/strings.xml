@@ -86,6 +86,10 @@
     <string name="sign_in_act_header_2">Εισαγάγετε το email και τον κωδικό πρόσβασής σας για να συνεχίσετε.</string>
     <string name="txt_lets_get_started">Ας ξεκινήσουμε</string>
     <string name="txt_already_have_an_account">Έχετε ήδη λογαριασμό; <b>Συνδεθείτε</b></string>
-
     <string name="txt_gender">Φύλο</string>
+    <string name="image_selection_failed">Η επιλογή εικόνας ακυρώθηκε</string>
+    <string name="read_storage_permission_denied">Ωχ, μόλις αρνηθήκατε την άδεια αποθήκευσης. Μπορείτε επίσης να την επιτρέψετε από τις ρυθμίσεις.</string>
+    <string name="txt_male">Άντρας</string>
+    <string name="txt_female">Γυναίκα</string>
+    <string name="txt_no_description">Δεν υπάρχει περιγραφή.</string>
 </resources>

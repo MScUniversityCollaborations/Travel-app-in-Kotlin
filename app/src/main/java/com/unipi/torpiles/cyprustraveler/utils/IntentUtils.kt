@@ -35,4 +35,11 @@ class IntentUtils {
     fun goToSignUpActivity(context: Context) {
         context.startActivity(Intent(context, SignUpActivity::class.java))
     }
+
+    fun goToDestinationDetailsActivity(context: Context, destinationId: String) {
+        // Launch Product details screen.
+        val intent = Intent(context, DestinationDetailsActivity::class.java)
+        intent.putExtra(Constants.EXTRA_DESTINATION_ID, destinationId)
+        context.startActivity(intent)
+    }
 }

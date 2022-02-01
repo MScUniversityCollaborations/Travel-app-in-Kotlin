@@ -17,6 +17,8 @@ object Constants {
 	val STANDARD_SIMPLE_DATE_FORMAT = SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.ENGLISH)
 	val SNACKBAR_BEHAVIOR = BaseTransientBottomBar.Behavior().apply {
 		setSwipeDirection(SwipeDismissBehavior.SWIPE_DIRECTION_ANY) }
+	const val DELAY_TIMER_SPLASH_SCREEN: Long = 1500
+	const val DELAY_TIMER_SLIDER_SHOW: Long = 3000
 
 	//LANGUAGE
 	const val LANGUAGE : String = "language"
@@ -36,6 +38,7 @@ object Constants {
 	const val FIELD_IN_FAVOURITES: String = "inFavourites"
 	const val FIELD_DATE_ADDED: String = "dateAdded"
 	const val FIELD_USER_ID: String = "userId"
+	const val FIELD_DESTINATION_ID: String = "destinationId"
 	const val FIELD_FULL_NAME: String = "fullName"
 	const val FIELD_GENDER: String = "gender"
 	const val FIELD_IMG_URL: String = "imgUrl"
@@ -47,6 +50,7 @@ object Constants {
 	const val EXTRA_USER_DETAILS: String = "extraUserDetails"
 	const val EXTRA_REG_USERS_SNACKBAR: String = "extraShowRegisteredUserSnackbar"
 	const val EXTRA_USER_EMAIL: String = "extraUserEmail"
+	const val EXTRA_DESTINATION_ID: String = "extraDestinationId"
 
 	// Categories Constants
 	const val CATEGORY_BEACH = "beach"

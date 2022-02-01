@@ -9,6 +9,7 @@ import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.databinding.ItemFavouriteDestinationBinding
 import com.unipi.torpiles.cyprustraveler.models.Favourite
 import com.unipi.torpiles.cyprustraveler.utils.GlideLoader
+import com.unipi.torpiles.cyprustraveler.utils.IntentUtils
 
 
 /**
@@ -78,7 +79,7 @@ open class FavouritesListAdapter(
         }
         // Click event on item click
         holder.itemView.setOnClickListener {
-            // IntentUtils().goToDestinationDetailsActivity(context, model.id)
+            IntentUtils().goToDestinationDetailsActivity(context, model.id)
         }
     }
 

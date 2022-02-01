@@ -1,8 +1,6 @@
 package com.unipi.torpiles.cyprustraveler.ui.fragments
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,13 +24,17 @@ class FavouritesFragment : BaseFragment() {
     ): View {
         _binding = FragmentFavouritesBinding.inflate(inflater, container, false)
 
-        init()
-
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        init()
+    }
+
     private fun init() {
-        veilRecycler()
+        // veilRecycler()
 
         loadFavorites()
     }
@@ -59,11 +61,11 @@ class FavouritesFragment : BaseFragment() {
     /**
      * A function to get the successful favourite list from cloud firestore.
      *
-     * @param favoritesList Will receive the favourite list from cloud firestore.
+     * @param favouritesList Will receive the favourite list from cloud firestore.
      */
-    fun successFavouritesListFromFireStore(favoritesList: ArrayList<Favourite>) {
+    fun successFavouritesListFromFireStore(favouritesList: ArrayList<Favourite>) {
 
-        if (favoritesList.size > 0) {
+        if (favouritesList.size > 0) {
             binding.veilRecyclerView.visibility = View.VISIBLE
             binding.layoutEmptyState.root.visibility = View.GONE
 
@@ -72,21 +74,22 @@ class FavouritesFragment : BaseFragment() {
                 setVeilLayout(R.layout.layout_shimmer_item_favourite_destination)
                 setAdapter(
                     FavouritesListAdapter(
-                        requireActivity(),
-                        favoritesList
+                        requireContext(),
+                        favouritesList
                     )
                 )
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false))
                 getRecyclerView().setHasFixedSize(true)
+                unVeil()
 
-                addVeiledItems(5)
+                /*addVeiledItems(5)
                 // delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
                     {
                         unVeil()
                     },
                     1000
-                )
+                )*/
             }
         }
         else {
@@ -109,7 +112,7 @@ class FavouritesFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
 
-        init()
+        // init()
     }
 
     override fun onDestroyView() {

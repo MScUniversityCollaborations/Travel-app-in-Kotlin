@@ -1,5 +1,6 @@
 package com.unipi.torpiles.cyprustraveler.ui.activities
 
+import Constants
 import Constants.ENGLISH_LANG
 import Constants.LANGUAGE
 import android.content.Intent
@@ -13,14 +14,12 @@ import com.unipi.torpiles.cyprustraveler.databinding.ActivitySplashBinding
 import com.unipi.torpiles.cyprustraveler.utils.SetLanguage
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
+import java.util.concurrent.TimeUnit
 
 class SplashActivity : AppCompatActivity() {
 
     // ~~~~~~~~ VARIABLES ~~~~~~~~
     private lateinit var binding: ActivitySplashBinding
-    companion object {
-        const val DELAY_TIMER: Long = 1500
-    }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +67,6 @@ class SplashActivity : AppCompatActivity() {
         backgroundExecutor.schedule({
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish() // Closing the current activity so the user can't go back to it with the back button and also there is no reason to keep it open.
-        }, DELAY_TIMER, java.util.concurrent.TimeUnit.MILLISECONDS)
+        }, Constants.DELAY_TIMER_SPLASH_SCREEN, TimeUnit.MILLISECONDS)
     }
 }

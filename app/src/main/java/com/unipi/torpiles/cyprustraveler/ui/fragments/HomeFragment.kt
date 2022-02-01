@@ -28,16 +28,21 @@ class HomeFragment : BaseFragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        init()
-
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        init()
+    }
+
     private fun init() {
-        veilRecyclers()
+        // veilRecyclers()
 
         loadDestinations()
         loadTopDestinations()
+
         setupClickListeners()
     }
 
@@ -65,7 +70,8 @@ class HomeFragment : BaseFragment() {
                 )
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
                 getRecyclerView().setHasFixedSize(true)
-                // unVeil()
+                unVeil()
+
                 addVeiledItems(3)
                 // Delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
@@ -77,7 +83,7 @@ class HomeFragment : BaseFragment() {
             }
         }
         else
-            unveilRecyclers()
+            binding.veilRecyclerViewDestinations.unVeil()
     }
 
     private fun loadTopDestinations() {
@@ -105,25 +111,24 @@ class HomeFragment : BaseFragment() {
                 )
                 setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
                 getRecyclerView().setHasFixedSize(true)
-                // unVeil()
+                unVeil()
 
-                addVeiledItems(5)
+                /*addVeiledItems(4)
                 // Delay-auto-unveil
                 Handler(Looper.getMainLooper()).postDelayed(
                     {
                         unVeil()
                     },
                     1000
-                )
+                )*/
             }
         } else {
-            unveilRecyclers()
+            binding.veilRecyclerViewTopDestinations.unVeil()
             // Hide the recycler and show the empty state layout.
             binding.apply {
                 veilRecyclerViewTopDestinations.visibility = View.INVISIBLE
                 layoutEmptyStateTopDestinations.root.visibility = View.VISIBLE
             }
-
         }
     }
 
@@ -137,13 +142,6 @@ class HomeFragment : BaseFragment() {
         }
     }
 
-    private fun unveilRecyclers() {
-        binding.apply {
-            veilRecyclerViewTopDestinations.unVeil()
-            veilRecyclerViewDestinations.unVeil()
-        }
-    }
-
     private fun setupClickListeners() {
         binding.apply {
             // txtViewTopDestinationsViewAll.setOnClickListener { IntentUtils().goToListProductsActivity(requireActivity(), "Deals") }
@@ -153,7 +151,7 @@ class HomeFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
 
-        init()
+        // init()
     }
 
     override fun onDestroyView() {
