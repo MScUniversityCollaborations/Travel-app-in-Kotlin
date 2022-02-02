@@ -169,8 +169,4 @@ class SignInActivity : BaseActivity() {
             it.setHomeAsUpIndicator(R.drawable.ic_chevron_left_24dp)
         }
     }
-
-    /*override fun onBackPressed() {
-        IntentUtils().goToMainActivity(this@SignInActivity)
-    }*/
 }
