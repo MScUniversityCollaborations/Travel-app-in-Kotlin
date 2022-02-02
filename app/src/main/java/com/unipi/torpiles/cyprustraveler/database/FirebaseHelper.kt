@@ -358,6 +358,7 @@ class FirestoreHelper {
 
                     favouritesList.add(favourite)
                 }
+
                 fragmentFavourites.successFavouritesListFromFireStore(favouritesList)
             }
             .addOnFailureListener { e ->

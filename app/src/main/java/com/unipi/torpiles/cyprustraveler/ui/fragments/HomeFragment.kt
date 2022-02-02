@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.adapters.DestinationListAdapter
 import com.unipi.torpiles.cyprustraveler.adapters.TopDestinationListAdapter
 import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
@@ -29,15 +28,7 @@ class HomeFragment : BaseFragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        init()
-    }
-
     private fun init() {
-        // veilRecyclers()
-
         loadDestinations()
         loadTopDestinations()
 
@@ -45,7 +36,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun loadDestinations() {
-        FirestoreHelper().getDestinationsList(this@HomeFragment)
+        FirestoreHelper().getDestinationsList(this)
     }
 
     fun successDestinationsListFromFireStore(destinationsList: ArrayList<Destination>) {
@@ -59,29 +50,15 @@ class HomeFragment : BaseFragment() {
 
             // Sets VeilRecyclerView's properties
             binding.veilRecyclerViewDestinations.run {
-                setVeilLayout(R.layout.layout_shimmer_item_destination)
-                setAdapter(
+                layoutManager = LinearLayoutManager(this@HomeFragment.context, LinearLayoutManager.HORIZONTAL ,false)
+                adapter =
                     DestinationListAdapter(
-                        requireContext(),
-                        destinationsList
-                    )
+                    requireContext(),
+                    destinationsList
                 )
-                setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
-                getRecyclerView().setHasFixedSize(true)
-                unVeil()
-
-                /*addVeiledItems(3)
-                // Delay-auto-unveil
-                Handler(Looper.getMainLooper()).postDelayed(
-                    {
-                        unVeil()
-                    },
-                    1000
-                )*/
+                setHasFixedSize(true)
             }
         }
-        else
-            binding.veilRecyclerViewDestinations.unVeil()
     }
 
     private fun loadTopDestinations() {
@@ -100,43 +77,20 @@ class HomeFragment : BaseFragment() {
 
             // Sets VeilRecyclerView's properties
             binding.veilRecyclerViewTopDestinations.run {
-                setVeilLayout(R.layout.layout_shimmer_item_top_destination)
-                setAdapter(
+                layoutManager = LinearLayoutManager(this@HomeFragment.context, LinearLayoutManager.HORIZONTAL ,false)
+                adapter =
                     TopDestinationListAdapter(
                         requireContext(),
                         topDestinationsList
                     )
-                )
-                setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false))
-                getRecyclerView().setHasFixedSize(true)
-                unVeil()
-
-                /*addVeiledItems(4)
-                // Delay-auto-unveil
-                Handler(Looper.getMainLooper()).postDelayed(
-                    {
-                        unVeil()
-                    },
-                    1000
-                )*/
+                setHasFixedSize(true)
             }
         } else {
-            binding.veilRecyclerViewTopDestinations.unVeil()
             // Hide the recycler and show the empty state layout.
             binding.apply {
                 veilRecyclerViewTopDestinations.visibility = View.INVISIBLE
                 layoutEmptyStateTopDestinations.root.visibility = View.VISIBLE
             }
-        }
-    }
-
-    private fun veilRecyclers() {
-        binding.apply {
-            veilRecyclerViewTopDestinations.veil()
-            veilRecyclerViewDestinations.veil()
-
-            veilRecyclerViewTopDestinations.addVeiledItems(5)
-            veilRecyclerViewDestinations.addVeiledItems(3)
         }
     }
 
@@ -149,7 +103,7 @@ class HomeFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
 
-        // init()
+        init()
     }
 
     override fun onDestroyView() {

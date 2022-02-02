@@ -30,8 +30,6 @@ class ProfileFragment : BaseFragment() {
     ): View {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-        init()
-
         return binding.root
     }
 
@@ -47,7 +45,7 @@ class ProfileFragment : BaseFragment() {
      */
     private fun setupUI() {
         // Veil the veiled layouts until we load our data.
-        veilDetails()
+        // veilDetails()
 
         // Check if the user is logged in, otherwise show the sign in state.
         if (FirestoreHelper().getCurrentUserID() != "") {
@@ -86,7 +84,7 @@ class ProfileFragment : BaseFragment() {
      * A function to get the user details.
      */
     private fun getUserDetails() {
-        FirestoreHelper().getUserDetails(this@ProfileFragment)
+        FirestoreHelper().getUserDetails(this)
     }
 
     /**
@@ -123,27 +121,27 @@ class ProfileFragment : BaseFragment() {
                     .loadUserPicture(mUserDetails.imgUrl, imgUserPictureFrame)
         }
 
-        unveilDetails()
+        // unveilDetails()
     }
 
     /**
      * A function to UNVEIL all the veiled layouts in the fragment.
      */
     fun unveilDetails() {
-        binding.apply {
+        /*binding.apply {
             vLayoutHead.unVeil()
             vLayoutBody.unVeil()
-        }
+        }*/
     }
 
     /**
      * A function to VEIL all the veiled layouts in the fragment.
      */
     private fun veilDetails() {
-        binding.apply {
+        /*binding.apply {
             vLayoutHead.veil()
             vLayoutBody.veil()
-        }
+        }*/
     }
 
     /**
@@ -152,5 +150,11 @@ class ProfileFragment : BaseFragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        init()
     }
 }

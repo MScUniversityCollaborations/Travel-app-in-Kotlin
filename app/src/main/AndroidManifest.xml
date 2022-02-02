@@ -14,6 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.CyprusTraveler">
 
         <!-- region [START Activities] -->
@@ -66,6 +67,7 @@
         <!-- Sign In activity -->
         <activity
             android:name=".ui.activities.SignInActivity"
+            android:exported="true"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.CyprusTraveler.NoActionBar_2"
@@ -79,6 +81,7 @@
         <!-- Sign Up activity -->
         <activity
             android:name=".ui.activities.SignUpActivity"
+            android:exported="true"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.CyprusTraveler.NoActionBar_2"
@@ -92,6 +95,7 @@
         <!-- Forgot Password activity -->
         <activity
             android:name=".ui.activities.ForgotPasswordActivity"
+            android:exported="true"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.CyprusTraveler.NoActionBar_2"
@@ -105,6 +109,7 @@
         <!-- Update Profile activity -->
         <activity
             android:name=".ui.activities.EditProfileActivity"
+            android:exported="true"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.CyprusTraveler.NoActionBar_2"

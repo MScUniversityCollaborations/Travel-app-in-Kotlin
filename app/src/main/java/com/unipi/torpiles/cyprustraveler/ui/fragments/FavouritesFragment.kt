@@ -4,8 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.unipi.torpiles.cyprustraveler.R
+import androidx.recyclerview.widget.GridLayoutManager
 import com.unipi.torpiles.cyprustraveler.adapters.FavouritesListAdapter
 import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
 import com.unipi.torpiles.cyprustraveler.databinding.FragmentFavouritesBinding
@@ -27,22 +26,14 @@ class FavouritesFragment : BaseFragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        init()
-    }
-
     private fun init() {
-        // veilRecycler()
-
         loadFavorites()
     }
 
     private fun loadFavorites() {
         // Check if the user is logged in, otherwise show the sign in state.
         if (FirestoreHelper().getCurrentUserID() != "") {
-            FirestoreHelper().getFavouritesList(this@FavouritesFragment)
+            FirestoreHelper().getFavouritesList(this)
         }
         else // If user is not signed in
             binding.apply {
@@ -71,16 +62,13 @@ class FavouritesFragment : BaseFragment() {
 
             // sets VeilRecyclerView's properties
             binding.veilRecyclerView.run {
-                setVeilLayout(R.layout.layout_shimmer_item_favourite_destination)
-                setAdapter(
+                layoutManager = GridLayoutManager(this@FavouritesFragment.context, 3, GridLayoutManager.VERTICAL ,false)
+                adapter =
                     FavouritesListAdapter(
                         requireContext(),
                         favouritesList
                     )
-                )
-                setLayoutManager(LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false))
-                getRecyclerView().setHasFixedSize(true)
-                unVeil()
+                setHasFixedSize(true)
 
                 /*addVeiledItems(5)
                 // delay-auto-unveil
@@ -94,30 +82,20 @@ class FavouritesFragment : BaseFragment() {
         }
         else {
             binding.apply {
-                veilRecyclerView.unVeil()
                 veilRecyclerView.visibility = View.GONE
                 layoutEmptyState.root.visibility = View.VISIBLE
             }
         }
     }
 
-    private fun veilRecycler() {
-        binding.apply {
-            veilRecyclerView.veil()
-
-            veilRecyclerView.addVeiledItems(5)
-        }
-    }
-
     override fun onResume() {
         super.onResume()
 
-        // init()
+        init()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-
         _binding = null
     }
 }

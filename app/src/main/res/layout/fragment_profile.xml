@@ -23,17 +23,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.skydoves.androidveil.VeilLayout
-                android:id="@+id/vLayout_Head"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:veilLayout_baseAlpha="0.6"
-                app:veilLayout_highlightAlpha="1.0"
-                app:veilLayout_highlightColor="@color/colorWhite"
-                app:veilLayout_radius="8dp"
-                app:veilLayout_shimmerEnable="true"
-                app:veilLayout_veiled="false">
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -80,19 +69,6 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </com.skydoves.androidveil.VeilLayout>
-
-            <com.skydoves.androidveil.VeilLayout
-                android:id="@+id/vLayout_body"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:veilLayout_baseAlpha="0.6"
-                app:veilLayout_baseColor="@color/colorSecondary2"
-                app:veilLayout_highlightAlpha="1.0"
-                app:veilLayout_highlightColor="@color/colorWhite"
-                app:veilLayout_radius="8dp"
-                app:veilLayout_shimmerEnable="true"
-                app:veilLayout_veiled="false">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -262,9 +238,6 @@
                         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </com.skydoves.androidveil.VeilLayout>
-
 
         </LinearLayout>
 
