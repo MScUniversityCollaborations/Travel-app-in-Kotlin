@@ -2,19 +2,15 @@ package com.unipi.torpiles.cyprustraveler.ui.activities
 
 import Constants
 import Constants.EN
-import Constants.ENGLISH_LANG
-import Constants.LANGUAGE
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.util.Log
 import android.view.ContextThemeWrapper
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.R
 import java.util.*
 import java.util.concurrent.Executors
@@ -92,7 +88,7 @@ open class BaseActivity : AppCompatActivity() {
     companion object {
         //var dLocale: Locale? = null
 
-        var dLocale: Locale? = Locale(EN)
+        var defaultLocale: Locale? = Locale(EN)
     }
 
     init {
@@ -101,16 +97,16 @@ open class BaseActivity : AppCompatActivity() {
         updateConfig(this)
     }
 
-     fun updateConfig(wrapper: ContextThemeWrapper) {
+     private fun updateConfig(wrapper: ContextThemeWrapper) {
         //Log.e("BASE ACTIVITY", "updateConfig" )
-        if(dLocale==Locale("")){//If dLocale is null return
+        if(defaultLocale==Locale("")){//If dLocale is null return
            // Log.e("BASE ACTIVITY", "return null" )
             return
         }
 
-        Locale.setDefault(dLocale)
+        Locale.setDefault(defaultLocale)
         val configuration = Configuration()
-        configuration.setLocale(dLocale)
+        configuration.setLocale(defaultLocale)
         wrapper.applyOverrideConfiguration(configuration)
     }
 

@@ -7,7 +7,6 @@ import Constants.GREEK_LANG
 import Constants.LANGUAGE
 import android.app.Application
 import android.content.Context
-import android.util.Log
 import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.ui.activities.BaseActivity
 import java.util.*
@@ -28,8 +27,8 @@ class SetLanguage : Application() {
          val language : String = Hawk.get(LANGUAGE)
          //Log.e("LANGUAGE CLASS", language)
          when(language){
-            GREEK_LANG ->    BaseActivity.dLocale = Locale(EL)
-            ENGLISH_LANG ->  BaseActivity.dLocale = Locale(EN)
+            GREEK_LANG ->    BaseActivity.defaultLocale = Locale(EL)
+            ENGLISH_LANG ->  BaseActivity.defaultLocale = Locale(EN)
         }
     }
 }

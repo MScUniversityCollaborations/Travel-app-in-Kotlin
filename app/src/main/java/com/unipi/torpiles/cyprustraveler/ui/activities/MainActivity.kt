@@ -34,10 +34,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         setupUI()
 
         binding.bottomNavigation.selectedItemId = R.id.nav_home
-        // replaceFragment(homeFragment)
     }
 
-    private fun setupBottomNavigationBar() {
+    private fun setupBottomNavBar() {
         binding.apply {
             bottomNavigation.apply {
                 setOnItemSelectedListener {
@@ -64,7 +63,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     private fun setupUI() {
         setupNavDrawer()
-        setupBottomNavigationBar()
+        setupBottomNavBar()
     }
 
     private fun setupNavDrawer() {

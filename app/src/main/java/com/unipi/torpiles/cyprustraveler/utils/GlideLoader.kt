@@ -36,22 +36,6 @@ class GlideLoader(val context: Context) : AppGlideModule() {
     /**
      * A function to load image from Uri or URL for the destination picture.
      */
-    fun loadDestinationPictureWide(image: Any, imageView: ImageView) {
-        try {
-            // Load the user image in the ImageView.
-            Glide
-                .with(context)
-                .load(image) // Uri or URL of the image
-                .placeholder(R.drawable.ic_no_image_found) // A default place holder if image is failed to load.
-                .into(imageView) // the view in which the image will be loaded.
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-    }
-
-    /**
-     * A function to load image from Uri or URL for the destination picture.
-     */
     fun loadDestinationPictureSlideShow(image: Any, imageView: ImageView) {
         try {
             // Load the user image in the ImageView.

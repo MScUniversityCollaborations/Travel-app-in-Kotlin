@@ -1,10 +1,14 @@
 package com.unipi.torpiles.cyprustraveler.adapters
 
 import Constants
+import Constants.ENGLISH_LANG
+import Constants.GREEK_LANG
+import Constants.LANGUAGE
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.orhanobut.hawk.Hawk
 import com.unipi.torpiles.cyprustraveler.R
 import com.unipi.torpiles.cyprustraveler.databinding.ItemFavouriteDestinationBinding
 import com.unipi.torpiles.cyprustraveler.models.Favourite
@@ -55,12 +59,14 @@ open class FavouritesListAdapter(
                 imageViewDestination
             )
 
-            when ("Eng") {
-                "Eng" -> {
+            Hawk.init(context).build()
+            val language : String = Hawk.get(LANGUAGE)
+            when (language) {
+                ENGLISH_LANG -> {
                     textViewDestinationName.text = model.name[0]
                     textViewDestinationCategory.text = model.category[0]
                 }
-                "Gr" -> {
+                GREEK_LANG -> {
                     textViewDestinationName.text = model.name[1]
                     textViewDestinationCategory.text = model.category[1]
                 }
