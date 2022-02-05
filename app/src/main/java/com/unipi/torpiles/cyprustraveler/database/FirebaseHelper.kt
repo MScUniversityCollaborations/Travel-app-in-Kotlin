@@ -370,7 +370,7 @@ class FirestoreHelper {
     }
 
     fun getFavouriteDestination(activity: Activity, destinationId: String) {
-        dbFirestore.collection(Constants.COLLECTION_DESTINATIONS)
+        dbFirestore.collection(Constants.COLLECTION_FAVOURITES)
             .whereEqualTo(Constants.FIELD_USER_ID, getCurrentUserID())
             .whereEqualTo(Constants.FIELD_DESTINATION_ID, destinationId)
             .get() // Will get the documents snapshots.

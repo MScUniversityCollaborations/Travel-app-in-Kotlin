@@ -4,9 +4,11 @@ import Constants
 import Constants.ENGLISH_LANG
 import Constants.GREEK_LANG
 import Constants.LANGUAGE
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
@@ -210,8 +212,9 @@ class DestinationDetailsActivity : BaseActivity() {
         val actionBar = supportActionBar
         actionBar?.let {
             it.setDisplayShowCustomEnabled(true)
-            it.setCustomView(R.layout.toolbar_destination_details)
             it.setDisplayHomeAsUpEnabled(true)
+            it.setCustomView(R.layout.toolbar_destination_details)
+            it.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.colorContainer)))
             it.setHomeAsUpIndicator(R.drawable.ic_chevron_left_24dp)
         }
     }

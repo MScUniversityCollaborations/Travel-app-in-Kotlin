@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.unipi.torpiles.cyprustraveler.adapters.FavouritesListAdapter
 import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
 import com.unipi.torpiles.cyprustraveler.databinding.FragmentFavouritesBinding
@@ -62,13 +62,13 @@ class FavouritesFragment : BaseFragment() {
 
             // sets VeilRecyclerView's properties
             binding.veilRecyclerView.run {
-                layoutManager = GridLayoutManager(this@FavouritesFragment.context, 3, GridLayoutManager.VERTICAL ,false)
+                layoutManager = LinearLayoutManager(this@FavouritesFragment.context, LinearLayoutManager.VERTICAL ,false)
+                // layoutManager = GridLayoutManager(this@FavouritesFragment.context, 2, GridLayoutManager.VERTICAL ,false)
                 adapter =
                     FavouritesListAdapter(
                         requireContext(),
                         favouritesList
                     )
-                setHasFixedSize(true)
 
                 /*addVeiledItems(5)
                 // delay-auto-unveil

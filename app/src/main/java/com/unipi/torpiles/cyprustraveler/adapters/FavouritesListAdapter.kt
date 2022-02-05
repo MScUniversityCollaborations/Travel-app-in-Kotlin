@@ -85,7 +85,7 @@ open class FavouritesListAdapter(
         }
         // Click event on item click
         holder.itemView.setOnClickListener {
-            IntentUtils().goToDestinationDetailsActivity(context, model.id)
+            IntentUtils().goToDestinationDetailsActivity(context, model.destinationId)
         }
     }
 

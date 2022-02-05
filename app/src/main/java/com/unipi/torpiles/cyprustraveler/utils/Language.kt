@@ -19,14 +19,14 @@ class SetLanguage : Application() {
     }
 
     private fun init() {
-        setUpLanguage(baseContext)
+        setupLanguage(baseContext)
     }
 
-     fun setUpLanguage(context: Context){
+     fun setupLanguage(context: Context) {
          Hawk.init(context).build()
          val language : String = Hawk.get(LANGUAGE)
          //Log.e("LANGUAGE CLASS", language)
-         when(language){
+         when (language) {
             GREEK_LANG ->    BaseActivity.defaultLocale = Locale(EL)
             ENGLISH_LANG ->  BaseActivity.defaultLocale = Locale(EN)
         }

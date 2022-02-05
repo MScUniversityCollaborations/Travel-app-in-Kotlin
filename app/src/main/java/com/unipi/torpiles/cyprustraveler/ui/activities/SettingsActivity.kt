@@ -77,7 +77,7 @@ class SettingsActivity : BaseActivity() {
                     Hawk.put(LANGUAGE, ENGLISH_LANG)
                 }
             }
-            SetLanguage().setUpLanguage(baseContext)
+            SetLanguage().setupLanguage(baseContext)
         }
     }
 

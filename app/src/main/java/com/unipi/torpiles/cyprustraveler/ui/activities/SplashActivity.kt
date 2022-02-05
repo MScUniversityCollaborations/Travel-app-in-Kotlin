@@ -33,15 +33,16 @@ class SplashActivity : AppCompatActivity() {
     private fun init() {
         Hawk.init(this).build()
         checkForHawkKey()
-        SetLanguage().setUpLanguage(baseContext)
+        SetLanguage().setupLanguage(baseContext)
         hideSystemUI() // Hides the status bar and title from android UI.
         moveToNextActivity() // Moves to next activity in a specific amount of time after loading.
     }
 
-    private fun checkForHawkKey(){
-        if(Hawk.contains(LANGUAGE)){
+    private fun checkForHawkKey() {
+        if (Hawk.contains(LANGUAGE)) {
             return
-        }else{
+        }
+        else{
             Hawk.put(LANGUAGE, ENGLISH_LANG)
         }
     }
