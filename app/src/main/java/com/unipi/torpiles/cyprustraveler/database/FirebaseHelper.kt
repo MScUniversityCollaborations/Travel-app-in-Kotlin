@@ -97,7 +97,7 @@ class FirestoreHelper {
      */
     fun getDestinationsList(fragment: Fragment) {
         dbFirestore.collection(Constants.COLLECTION_DESTINATIONS)
-            .limit(10)
+            // .limit(10)
             .get() // Will get the documents snapshots.
             .addOnSuccessListener { document ->
 

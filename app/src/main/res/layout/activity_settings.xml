@@ -75,33 +75,33 @@
 
                 </RadioGroup>
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/textView_appearance"
-                    style="@style/TextViewBold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="29dp"
-                    android:text="@string/txt_appearance"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+<!--                <com.google.android.material.textview.MaterialTextView-->
+<!--                    android:id="@+id/textView_appearance"-->
+<!--                    style="@style/TextViewBold"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="29dp"-->
+<!--                    android:text="@string/txt_appearance"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    tools:ignore="MissingConstraints" />-->
 
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/switch_night_mode"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/core_sans_cr_65_bold"
-                    android:switchPadding="100dp"
-                    android:text="@string/dark_mode"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="@+id/textView_appearance"
-                    app:layout_constraintTop_toBottomOf="@+id/textView_appearance"
-                    tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+<!--                <androidx.appcompat.widget.SwitchCompat-->
+<!--                    android:id="@+id/switch_night_mode"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:fontFamily="@font/core_sans_cr_65_bold"-->
+<!--                    android:switchPadding="100dp"-->
+<!--                    android:text="@string/dark_mode"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/textView_appearance"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textView_appearance"-->
+<!--                    tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />-->
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/textView_lang"
@@ -109,12 +109,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="29dp"
                     android:text="@string/txt_language"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/switch_night_mode" />
+                    app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
