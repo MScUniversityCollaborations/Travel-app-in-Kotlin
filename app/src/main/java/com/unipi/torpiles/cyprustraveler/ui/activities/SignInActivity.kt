@@ -20,6 +20,7 @@ import com.unipi.torpiles.cyprustraveler.utils.SnackBarSuccessClass
 
 
 class SignInActivity : BaseActivity() {
+
     private lateinit var binding: ActivitySignInBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
