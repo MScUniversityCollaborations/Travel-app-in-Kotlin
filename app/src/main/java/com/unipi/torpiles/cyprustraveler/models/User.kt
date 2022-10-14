@@ -22,6 +22,10 @@ data class User(
     val phoneNumber: String = "",
     val phoneCode: Int = 0,
     val gender: Int = -1,
+    val adventure : Int = 1,
+    val sport : Int = 1,
+    val relaxation : Int = 1,
+    val attractions : Int = 1,
 
     @ServerTimestamp
     val dateRegistered: Date = Date(),

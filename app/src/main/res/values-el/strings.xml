@@ -87,6 +87,11 @@
     <string name="txt_lets_get_started">Ας ξεκινήσουμε</string>
     <string name="txt_already_have_an_account">Έχετε ήδη λογαριασμό; <b>Συνδεθείτε</b></string>
     <string name="txt_gender">Φύλο</string>
+    <string name="txt_interests">Ενδιαφέροντα</string>
+    <string name="txt_relaxation">Χαλάρωση</string>
+    <string name="txt_adventure">Περιπέτεια</string>
+    <string name="txt_sports">Αθλητισμός</string>
+    <string name="txt_museums">Μουσεία/Αξιοθέατα/Εκκλησίες</string>
     <string name="image_selection_failed">Η επιλογή εικόνας ακυρώθηκε</string>
     <string name="read_storage_permission_denied">Ωχ, μόλις αρνηθήκατε την άδεια αποθήκευσης. Μπορείτε επίσης να την επιτρέψετε από τις ρυθμίσεις.</string>
     <string name="txt_male">Άντρας</string>

@@ -95,6 +95,11 @@ class EditProfileActivity : BaseActivity() {
                         rbGenderMale.isChecked = true
                     else
                         rbGenderFemale.isChecked = true
+                // Set Interests in check boxes
+                cbAdventure.isChecked = mUserDetails.adventure == 0
+                cbSport.isChecked = mUserDetails.sport == 0
+                cbRelaxation.isChecked = mUserDetails.relaxation == 0
+                cbAttractions.isChecked = mUserDetails.attractions == 0
             }
         }
     }
@@ -131,6 +136,14 @@ class EditProfileActivity : BaseActivity() {
                 userHashMap[Constants.FIELD_FULL_NAME] = inputFullName
             }
 
+            // 0: Selected
+            // 1: Not Selected
+            val adventure = if (cbAdventure.isChecked) 0 else 1
+            val sport = if (cbSport.isChecked) 0 else 1
+            val relaxation = if (cbRelaxation.isChecked) 0 else 1
+            val attractions = if (cbAttractions.isChecked) 0 else 1
+
+
             // -1: Not set
             // 0: Male
             // 1: Female
@@ -151,6 +164,14 @@ class EditProfileActivity : BaseActivity() {
             if (gender != mUserDetails.gender) {
                 userHashMap[Constants.FIELD_GENDER] = gender
             }
+
+            if(adventure != mUserDetails.adventure) userHashMap[Constants.FIELD_ADVENTURE] = adventure
+
+            if(sport != mUserDetails.sport) userHashMap[Constants.FIELD_SPORT] = sport
+
+            if(relaxation != mUserDetails.relaxation) userHashMap[Constants.FIELD_RELAXATION] = relaxation
+
+            if(attractions != mUserDetails.attractions) userHashMap[Constants.FIELD_ATTRACTIONS] = attractions
 
             if (inputPhoneCode != 0) {
                 userHashMap[Constants.FIELD_PHONE_CODE] = inputPhoneCode

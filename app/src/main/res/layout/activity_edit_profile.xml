@@ -64,7 +64,6 @@
 
                 </FrameLayout>
 
-
                 <TextView
                     android:id="@+id/textView_Full_Name"
                     android:layout_width="wrap_content"
@@ -203,8 +202,6 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="32dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text_view_gender">
@@ -239,6 +236,88 @@
                         android:textStyle="bold" />
 
                 </RadioGroup>
+
+                <TextView
+                    android:id="@+id/text_view_interests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/core_sans_cr_55_medium"
+                    android:text="@string/txt_interests"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:layout_marginTop="29dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/rg_type"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_type" />
+
+                <LinearLayout
+                    android:id="@+id/checkBox_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="32dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_interests">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_adventure"
+                        style="@style/TextViewMedium"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/drawable_gender_tab_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="@string/txt_adventure" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_relaxation"
+                        style="@style/TextViewMedium"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/drawable_gender_tab_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="@string/txt_relaxation" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_sport"
+                        style="@style/TextViewMedium"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/drawable_gender_tab_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="@string/txt_sports" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_attractions"
+                        style="@style/TextViewMedium"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/drawable_gender_tab_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:text="@string/txt_museums" />
+
+                </LinearLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

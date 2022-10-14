@@ -45,6 +45,10 @@ object Constants {
 	const val FIELD_COMPLETE_PROFILE: String = "profileCompleted"
 	const val FIELD_PHONE_NUMBER: String = "phoneNumber"
 	const val FIELD_PHONE_CODE: String = "phoneCode"
+	const val FIELD_ATTRACTIONS: String = "attractions"
+	const val FIELD_SPORT: String = "sport"
+	const val FIELD_RELAXATION: String = "relaxation"
+	const val FIELD_ADVENTURE: String = "adventure"
 
 	// Intent Extras
 	const val EXTRA_USER_DETAILS: String = "extraUserDetails"

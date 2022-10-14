@@ -121,6 +121,9 @@
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/drawer_nav_menu.xml" value="0.23229166666666667" />
         <entry key="..\:/Vault/University/MSc/1st Semester/SPECIAL SUBJECTS IN  SOFTWARE TECHNOLOGY/Cyprus-Traveler/app/src/main/res/menu/tabs.xml" value="0.23229166666666667" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.4" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.38903985507246375" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.4" />
       </map>
     </option>
   </component>
