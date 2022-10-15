@@ -1,6 +1,8 @@
 package com.unipi.torpiles.cyprustraveler.ui.fragments
 
+import Constants.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +12,19 @@ import com.unipi.torpiles.cyprustraveler.adapters.TopDestinationListAdapter
 import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
 import com.unipi.torpiles.cyprustraveler.databinding.FragmentHomeBinding
 import com.unipi.torpiles.cyprustraveler.models.Destination
+import com.unipi.torpiles.cyprustraveler.models.User
+
 
 class HomeFragment : BaseFragment() {
 
     // ~~~~~~~VARIABLES~~~~~~~
     private var _binding: FragmentHomeBinding? = null  // Scoped to the lifecycle of the fragment's view (between onCreateView and onDestroyView)
     private val binding get() = _binding!!
+
+    // Instance of User data model class. We will initialize it later on.
+    private lateinit var mUserDetails: User
+
+
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     override fun onCreateView(
@@ -29,6 +38,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun init() {
+        getUserDetails()
         loadDestinations()
         loadTopDestinations()
 
@@ -39,9 +49,45 @@ class HomeFragment : BaseFragment() {
         FirestoreHelper().getDestinationsList(this)
     }
 
+    private fun getUserDetails() {
+        FirestoreHelper().getUserDetails(this)
+    }
+
+    fun loadUserDetails(userDetails: User) {
+        mUserDetails = userDetails
+    }
+
+
     fun successDestinationsListFromFireStore(destinationsList: ArrayList<Destination>) {
 
-        if (destinationsList.size > 0) {
+        val destInterestsList: ArrayList<Destination> = ArrayList()
+
+        if (destinationsList.size > 0 && mUserDetails.hasSelectedInterests) {
+//            binding.veilRecyclerViewDestinations.visibility = View.VISIBLE
+//            binding.layoutUserHasNotSelectedInterests.root.visibility = View.GONE
+
+            destinationsList.forEach{
+
+                if(mUserDetails.adventure == 0){
+                    if(it.category[0] == "Mountain" || it.category[0] == "Nature") destInterestsList.add(it)
+                }
+
+                if(mUserDetails.hotels == 0){
+                    if(it.category[0] == "Hotel") destInterestsList.add(it)
+                }
+
+                if(mUserDetails.restaurants == 0){
+                    if(it.category[0] == "Restaurant") destInterestsList.add(it)
+                }
+
+                if(mUserDetails.relaxation == 0){
+                    if(it.category[0] == "Beach" || it.category[0] == "Bar") destInterestsList.add(it)
+                }
+
+                if(mUserDetails.attractions == 0){
+                    if(it.category[0] == "Church" || it.category[0] == "Monument") destInterestsList.add(it)
+                }
+            }
 
             // Show the recycler and remove the empty state layout completely.
             binding.apply {
@@ -54,10 +100,15 @@ class HomeFragment : BaseFragment() {
                 adapter =
                     DestinationListAdapter(
                     requireContext(),
-                    destinationsList
+                    destInterestsList
                 )
                 setHasFixedSize(true)
             }
+        } else {
+//            binding.apply {
+//                veilRecyclerViewDestinations.visibility = View.GONE
+//                layoutUserHasNotSelectedInterests.root.visibility = View.VISIBLE
+//            }
         }
     }
 

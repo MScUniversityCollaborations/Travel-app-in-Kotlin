@@ -52,6 +52,8 @@
     <string name="txt_must_sign_in_2">You must sign in to see this.</string>
     <string name="txt_no_favorites">No favorites found!</string>
     <string name="txt_no_favorites_2">You haven\'t add anything to your favorites yet!</string>
+    <string name="txt_no_interests">No interests found!</string>
+    <string name="txt_no_interests_2">You haven\'t yet selected your interests from your profile!</string>
     <string name="txt_sign_in">Sign In</string>
     <string name="txt_sign_up">Sign Up</string>
     <string name="txt_destinations">Destinations</string>
@@ -100,8 +102,10 @@
     <string name="txt_interests">Interests</string>
     <string name="txt_relaxation">Relaxation</string>
     <string name="txt_adventure">Adventure</string>
-    <string name="txt_sports">Sport</string>
+    <string name="txt_sports">Sport (coming soon)</string>
     <string name="txt_museums">Museums/Attractions/Churches</string>
+    <string name="txt_hotels">Hotels</string>
+    <string name="txt_restaurants">Restaurants</string>
     <string name="image_selection_failed">Image selection cancelled</string>
     <string name="read_storage_permission_denied">Oops, you just denied the permission for storage. You can also allow it from settings.</string>
     <string name="txt_male">Male</string>

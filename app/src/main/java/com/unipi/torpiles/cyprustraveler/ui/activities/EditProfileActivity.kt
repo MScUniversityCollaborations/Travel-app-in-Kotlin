@@ -97,9 +97,11 @@ class EditProfileActivity : BaseActivity() {
                         rbGenderFemale.isChecked = true
                 // Set Interests in check boxes
                 cbAdventure.isChecked = mUserDetails.adventure == 0
-                cbSport.isChecked = mUserDetails.sport == 0
+                //cbSport.isChecked = mUserDetails.sport == 0
                 cbRelaxation.isChecked = mUserDetails.relaxation == 0
                 cbAttractions.isChecked = mUserDetails.attractions == 0
+                cbHotels.isChecked = mUserDetails.hotels == 0
+                cbRestaurants.isChecked = mUserDetails.restaurants == 0
             }
         }
     }
@@ -139,11 +141,15 @@ class EditProfileActivity : BaseActivity() {
             // 0: Selected
             // 1: Not Selected
             val adventure = if (cbAdventure.isChecked) 0 else 1
-            val sport = if (cbSport.isChecked) 0 else 1
+            //val sport = if (cbSport.isChecked) 0 else 1
             val relaxation = if (cbRelaxation.isChecked) 0 else 1
             val attractions = if (cbAttractions.isChecked) 0 else 1
+            val hotels = if (cbHotels.isChecked) 0 else 1
+            val restaurants = if (cbRestaurants.isChecked) 0 else 1
 
-
+            val hasSelectedInterests = (cbAdventure.isChecked || cbRelaxation.isChecked
+                    || cbAttractions.isChecked || cbHotels.isChecked
+                    || cbRestaurants.isChecked)
             // -1: Not set
             // 0: Male
             // 1: Female
@@ -166,12 +172,12 @@ class EditProfileActivity : BaseActivity() {
             }
 
             if(adventure != mUserDetails.adventure) userHashMap[Constants.FIELD_ADVENTURE] = adventure
-
-            if(sport != mUserDetails.sport) userHashMap[Constants.FIELD_SPORT] = sport
-
+            //if(sport != mUserDetails.sport) userHashMap[Constants.FIELD_SPORT] = sport
             if(relaxation != mUserDetails.relaxation) userHashMap[Constants.FIELD_RELAXATION] = relaxation
-
             if(attractions != mUserDetails.attractions) userHashMap[Constants.FIELD_ATTRACTIONS] = attractions
+            if(hotels != mUserDetails.hotels) userHashMap[Constants.FIELD_HOTELS] = hotels
+            if(restaurants != mUserDetails.restaurants) userHashMap[Constants.FIELD_RESTAURANTS] = restaurants
+            if(hasSelectedInterests != mUserDetails.hasSelectedInterests) userHashMap[Constants.FIELD_HAS_SELECTED] = hasSelectedInterests
 
             if (inputPhoneCode != 0) {
                 userHashMap[Constants.FIELD_PHONE_CODE] = inputPhoneCode

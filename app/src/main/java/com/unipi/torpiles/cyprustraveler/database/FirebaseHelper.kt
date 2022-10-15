@@ -262,6 +262,9 @@ class FirestoreHelper {
                     is ProfileFragment -> {
                         fragment.userDetailsSuccess(user)
                     }
+                    is HomeFragment ->{
+                        fragment.loadUserDetails(user)
+                    }
                 }
             }
             .addOnFailureListener { e ->
