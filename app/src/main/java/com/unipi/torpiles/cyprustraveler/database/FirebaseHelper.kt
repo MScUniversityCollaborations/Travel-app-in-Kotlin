@@ -263,7 +263,7 @@ class FirestoreHelper {
                         fragment.userDetailsSuccess(user)
                     }
                     is HomeFragment ->{
-                        fragment.loadUserDetails(user)
+                        fragment.userDetailsSuccess(user)
                     }
                 }
             }

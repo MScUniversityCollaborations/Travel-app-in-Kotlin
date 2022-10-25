@@ -12,6 +12,7 @@ import com.unipi.torpiles.cyprustraveler.adapters.TopDestinationListAdapter
 import com.unipi.torpiles.cyprustraveler.database.FirestoreHelper
 import com.unipi.torpiles.cyprustraveler.databinding.FragmentHomeBinding
 import com.unipi.torpiles.cyprustraveler.models.Destination
+import com.unipi.torpiles.cyprustraveler.models.Favourite
 import com.unipi.torpiles.cyprustraveler.models.User
 
 
@@ -22,6 +23,7 @@ class HomeFragment : BaseFragment() {
     private val binding get() = _binding!!
 
     // Instance of User data model class. We will initialize it later on.
+
     private lateinit var mUserDetails: User
 
 
@@ -39,9 +41,8 @@ class HomeFragment : BaseFragment() {
 
     private fun init() {
         getUserDetails()
-        loadDestinations()
+        //loadDestinations()
         loadTopDestinations()
-
         setupClickListeners()
     }
 
@@ -49,22 +50,30 @@ class HomeFragment : BaseFragment() {
         FirestoreHelper().getDestinationsList(this)
     }
 
+    /**
+     * A function to get the user details.
+     */
     private fun getUserDetails() {
         FirestoreHelper().getUserDetails(this)
     }
 
-    fun loadUserDetails(userDetails: User) {
-        mUserDetails = userDetails
+    /**
+     * A function to notify the success result of user details.
+     *
+     * @param mUser A model class with user details.
+     */
+    fun userDetailsSuccess(mUser: User) {
+        mUserDetails = mUser
+        loadDestinations()
     }
-
 
     fun successDestinationsListFromFireStore(destinationsList: ArrayList<Destination>) {
 
         val destInterestsList: ArrayList<Destination> = ArrayList()
 
         if (destinationsList.size > 0 && mUserDetails.hasSelectedInterests) {
-//            binding.veilRecyclerViewDestinations.visibility = View.VISIBLE
-//            binding.layoutUserHasNotSelectedInterests.root.visibility = View.GONE
+            binding.veilRecyclerViewDestinations.visibility = View.VISIBLE
+            binding.layoutUserHasNotSelectedInterests.root.visibility = View.GONE
 
             destinationsList.forEach{
 
@@ -105,10 +114,11 @@ class HomeFragment : BaseFragment() {
                 setHasFixedSize(true)
             }
         } else {
-//            binding.apply {
-//                veilRecyclerViewDestinations.visibility = View.GONE
-//                layoutUserHasNotSelectedInterests.root.visibility = View.VISIBLE
-//            }
+            binding.apply {
+                veilRecyclerViewDestinations.visibility = View.GONE
+
+                layoutUserHasNotSelectedInterests.root.visibility = View.VISIBLE
+            }
         }
     }
 

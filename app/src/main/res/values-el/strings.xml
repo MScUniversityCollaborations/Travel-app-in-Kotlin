@@ -44,7 +44,7 @@
     <string name="txt_must_sign_in_2">Πρέπει να συνδεθείτε για να προχωρήσετε.</string>
     <string name="txt_no_favorites">Δεν βρέθηκαν αγαπημένα!</string>
     <string name="txt_no_favorites_2">Δεν έχετε προσθέσει κάποιο προορισμό στα αγαπημένα σας ακόμη!</string>
-    <string name="txt_no_interests">Δεν βρέθηκαν ενδιεφέροντα</string>
+    <string name="txt_no_interests">Δεν βρέθηκαν ενδιεφέροντα!</string>
     <string name="txt_no_interests_2">Δεν έχετε επιλέξει ακόμα τα ενδιαφέροντά σας από το προφίλ σας!</string>
 
     <string name="txt_sign_in">Σύνδεση</string>
