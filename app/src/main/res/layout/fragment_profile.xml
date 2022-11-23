@@ -81,10 +81,13 @@
 
                     <TextView
                         android:id="@+id/textView_Account_Info"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="29dp"
+                        android:layout_marginEnd="16dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
                         android:fontFamily="@font/core_sans_cr_55_medium"
                         android:text="@string/txt_account_info"
                         android:textColor="@color/colorText"

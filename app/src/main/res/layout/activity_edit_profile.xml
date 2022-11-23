@@ -225,7 +225,7 @@
                         style="@style/TextViewMedium"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="16dp"
                         android:layout_weight="1"
                         android:background="@drawable/drawable_gender_tab_selector"
                         android:button="@null"
@@ -280,7 +280,7 @@
                     <com.google.android.material.checkbox.MaterialCheckBox
                         android:id="@+id/cb_relaxation"
                         style="@style/TextViewMedium"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:background="@drawable/drawable_gender_tab_selector"
@@ -293,7 +293,7 @@
                     <com.google.android.material.checkbox.MaterialCheckBox
                         android:id="@+id/cb_hotels"
                         style="@style/TextViewMedium"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:background="@drawable/drawable_gender_tab_selector"
@@ -306,7 +306,7 @@
                     <com.google.android.material.checkbox.MaterialCheckBox
                         android:id="@+id/cb_restaurants"
                         style="@style/TextViewMedium"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:background="@drawable/drawable_gender_tab_selector"
@@ -319,7 +319,7 @@
                     <com.google.android.material.checkbox.MaterialCheckBox
                         android:id="@+id/cb_attractions"
                         style="@style/TextViewMedium"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:background="@drawable/drawable_gender_tab_selector"
@@ -332,7 +332,7 @@
                     <com.google.android.material.checkbox.MaterialCheckBox
                         android:id="@+id/cb_sport"
                         style="@style/TextViewMedium"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="16dp"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:background="@drawable/drawable_gender_tab_selector"
